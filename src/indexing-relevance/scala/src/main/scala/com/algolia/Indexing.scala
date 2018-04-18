@@ -15,7 +15,7 @@ object Indexing {
 
     val client = new AlgoliaClient("YourApplicationID", "YourAPIKey")
     for {
-      result <- client.execute(index into "index1" objects products)
+      result <- client.execute(index into "demo_ecommerce" objects products)
     } yield result
   }
 
