@@ -70,7 +70,7 @@ public class Contact {
     return closeDate;
   }
 
-  public Opportunity setCloseDate(String closeDate) {
+  public Contact setCloseDate(String closeDate) {
     this.closeDate = closeDate;
     return this;
   }
