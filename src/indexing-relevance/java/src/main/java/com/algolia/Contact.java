@@ -1,5 +1,8 @@
 package com.algolia;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Contact {
   private String objectID;
   private String accountID;
