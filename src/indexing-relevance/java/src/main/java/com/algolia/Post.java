@@ -1,7 +1,9 @@
 package com.algolia;
 
 import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Post {
 
   private String objectID;
