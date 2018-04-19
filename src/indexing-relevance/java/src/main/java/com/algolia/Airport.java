@@ -1,6 +1,6 @@
 package com.algolia;
 
-public class Location {
+public class Airport {
 
   private String name;
   private String city;
@@ -14,7 +14,7 @@ public class Location {
     return name;
   }
 
-  public Location setName(String name) {
+  public Airport setName(String name) {
     this.name = name;
     return this;
   }
@@ -23,7 +23,7 @@ public class Location {
     return city;
   }
 
-  public Location setCity(String city) {
+  public Airport setCity(String city) {
     this.city = city;
     return this;
   }
@@ -32,7 +32,7 @@ public class Location {
     return country;
   }
 
-  public Location setCountry(String country) {
+  public Airport setCountry(String country) {
     this.country = country;
     return this;
   }
@@ -41,7 +41,7 @@ public class Location {
     return iataCode;
   }
 
-  public Location setIataCode(String iataCode) {
+  public Airport setIataCode(String iataCode) {
     this.iataCode = iataCode;
     return this;
   }
@@ -50,7 +50,7 @@ public class Location {
     return _geoLoc;
   }
 
-  public Location set_geoLoc(GeoLoc _geoLoc) {
+  public Airport set_geoLoc(GeoLoc _geoLoc) {
     this._geoLoc = _geoLoc;
     return this;
   }
@@ -59,7 +59,7 @@ public class Location {
     return linksCount;
   }
 
-  public Location setLinksCount(Integer linksCount) {
+  public Airport setLinksCount(Integer linksCount) {
     this.linksCount = linksCount;
     return this;
   }
@@ -68,7 +68,7 @@ public class Location {
     return objectID;
   }
 
-  public Location setObjectID(String objectID) {
+  public Airport setObjectID(String objectID) {
     this.objectID = objectID;
     return this;
   }
