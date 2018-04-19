@@ -2,7 +2,7 @@ package com.algolia;
 
 import java.util.Map;
 
-public class BlogPost {
+public class Post {
 
   private String objectID;
   private Integer postId;
@@ -22,7 +22,7 @@ public class BlogPost {
     return objectID;
   }
 
-  public BlogPost setObjectID(String objectID) {
+  public Post setObjectID(String objectID) {
     this.objectID = objectID;
     return this;
   }
@@ -31,7 +31,7 @@ public class BlogPost {
     return postId;
   }
 
-  public BlogPost setPostId(Integer postId) {
+  public Post setPostId(Integer postId) {
     this.postId = postId;
     return this;
   }
@@ -40,7 +40,7 @@ public class BlogPost {
     return postTitle;
   }
 
-  public BlogPost setPostTitle(String postTitle) {
+  public Post setPostTitle(String postTitle) {
     this.postTitle = postTitle;
     return this;
   }
@@ -49,7 +49,7 @@ public class BlogPost {
     return postDate;
   }
 
-  public BlogPost setPostDate(Integer postDate) {
+  public Post setPostDate(Integer postDate) {
     this.postDate = postDate;
     return this;
   }
@@ -58,7 +58,7 @@ public class BlogPost {
     return postDateFormatted;
   }
 
-  public BlogPost setPostDateFormatted(String postDateFormatted) {
+  public Post setPostDateFormatted(String postDateFormatted) {
     this.postDateFormatted = postDateFormatted;
     return this;
   }
@@ -67,7 +67,7 @@ public class BlogPost {
     return postAuthor;
   }
 
-  public BlogPost setPostAuthor(Author postAuthor) {
+  public Post setPostAuthor(Author postAuthor) {
     this.postAuthor = postAuthor;
     return this;
   }
@@ -76,7 +76,7 @@ public class BlogPost {
     return permalink;
   }
 
-  public BlogPost setPermalink(String permalink) {
+  public Post setPermalink(String permalink) {
     this.permalink = permalink;
     return this;
   }
@@ -85,7 +85,7 @@ public class BlogPost {
     return postMimeType;
   }
 
-  public BlogPost setPostMimeType(String postMimeType) {
+  public Post setPostMimeType(String postMimeType) {
     this.postMimeType = postMimeType;
     return this;
   }
@@ -94,7 +94,7 @@ public class BlogPost {
     return taxonomies;
   }
 
-  public BlogPost setTaxonomies(Map<String, String> taxonomies) {
+  public Post setTaxonomies(Map<String, String> taxonomies) {
     this.taxonomies = taxonomies;
     return this;
   }
@@ -103,7 +103,7 @@ public class BlogPost {
     return image;
   }
 
-  public BlogPost setImage(String image) {
+  public Post setImage(String image) {
     this.image = image;
     return this;
   }
@@ -112,7 +112,7 @@ public class BlogPost {
     return timeToRead;
   }
 
-  public BlogPost setTimeToRead(Integer timeToRead) {
+  public Post setTimeToRead(Integer timeToRead) {
     this.timeToRead = timeToRead;
     return this;
   }
@@ -121,7 +121,7 @@ public class BlogPost {
     return content;
   }
 
-  public BlogPost setContent(String content) {
+  public Post setContent(String content) {
     this.content = content;
     return this;
   }
@@ -130,7 +130,7 @@ public class BlogPost {
     return recordIndex;
   }
 
-  public BlogPost setRecordIndex(Integer recordIndex) {
+  public Post setRecordIndex(Integer recordIndex) {
     this.recordIndex = recordIndex;
     return this;
   }
