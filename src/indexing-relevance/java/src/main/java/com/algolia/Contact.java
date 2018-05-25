@@ -4,34 +4,17 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Contact {
-  private String objectID;
-  private String accountID;
   private String name;
   private String account;
   private Integer amount;
   private String id;
   private String closeDate;
   private String stageName;
-  private String ownerID;
-  private String type;
+  private String email;
+  private String website;
+  private String owner;
 
-  public String getObjectID() {
-    return objectID;
-  }
 
-  public Contact setObjectID(String objectID) {
-    this.objectID = objectID;
-    return this;
-  }
-
-  public String getAccountID() {
-    return accountID;
-  }
-
-  public Contact setAccountID(String accountID) {
-    this.accountID = accountID;
-    return this;
-  }
 
   public String getName() {
     return name;
@@ -60,15 +43,6 @@ public class Contact {
     return this;
   }
 
-  public String getId() {
-    return id;
-  }
-
-  public Contact setId(String id) {
-    this.id = id;
-    return this;
-  }
-
   public String getCloseDate() {
     return closeDate;
   }
@@ -87,21 +61,39 @@ public class Contact {
     return this;
   }
 
-  public String getOwnerID() {
-    return ownerID;
-  }
-
-  public Contact setOwnerID(String ownerID) {
-    this.ownerID = ownerID;
-    return this;
-  }
-
   public String getType() {
     return type;
   }
 
   public Contact setType(String type) {
     this.type = type;
+    return this;
+  }
+
+  public String getEmail() {
+    return email;
+  }
+
+  public Contact setEmail(String Email) {
+    this.email = email;
+    return this;
+  }
+
+  public String getWebsite() {
+    return website;
+  }
+
+  public Contact setWebsite(String website) {
+    this.website = website;
+    return this;
+  }
+
+  public String getOwner() {
+    return owner;
+  }
+
+  public Contact setOwner(String owner) {
+    this.owner = name;
     return this;
   }
 }

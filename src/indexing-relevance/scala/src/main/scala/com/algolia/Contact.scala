@@ -1,12 +1,13 @@
 package com.algolia
 
-case class Contact(objectID: String,
-                   accountID: String,
-                   name: String,
+case class Contact(name: String,
                    account: String,
                    amount: Int,
                    id: String,
                    closeDate: String,
                    stageName: String,
                    ownerID: String,
-                   `type`: String)
+                   `type`: String,
+                   email: String,
+                   website: String,
+                   owner: String)
