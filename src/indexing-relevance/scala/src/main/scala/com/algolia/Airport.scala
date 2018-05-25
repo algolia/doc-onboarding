@@ -3,9 +3,8 @@ package com.algolia
 case class Airport(name: String,
                    city: String,
                    country: String,
-                   iataCode: String,
+                   airportId: String,
                    _geoLoc: GeoLoc,
-                   linksCount: Int,
-                   objectID: String)
+                   linksCount: Int)
 
 case class GeoLoc(lat: Double, lng: Double)

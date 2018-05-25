@@ -8,7 +8,7 @@ public class Airport {
   private String name;
   private String city;
   private String country;
-  private String iataCode;
+  private String airportId;
   private GeoLoc _geoLoc;
   private Integer linksCount;
   private String objectID;
@@ -40,12 +40,12 @@ public class Airport {
     return this;
   }
 
-  public String getIataCode() {
-    return iataCode;
+  public String getAirportId() {
+    return airportId;
   }
 
-  public Airport setIataCode(String iataCode) {
-    this.iataCode = iataCode;
+  public Airport setAirportId(String airportId) {
+    this.airportId = airportId;
     return this;
   }
 
