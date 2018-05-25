@@ -6,5 +6,4 @@ case class Product(name: String,
                    categories: Iterable[String],
                    price: Double,
                    image: String,
-                   popularity: Integer,
-                   objectID: String)
+                   popularity: Integer)

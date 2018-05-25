@@ -13,7 +13,6 @@ public class Product {
   private Double price;
   private String image;
   private Integer popularity;
-  private String objectID;
 
   public Product() {
   }
@@ -78,15 +77,6 @@ public class Product {
 
   public Product setPopularity(Integer popularity) {
     this.popularity = popularity;
-    return this;
-  }
-
-  public String getObjectID() {
-    return objectID;
-  }
-
-  public Product setObjectID(String objectID) {
-    this.objectID = objectID;
     return this;
   }
 }

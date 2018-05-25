@@ -1,17 +1,14 @@
 package com.algolia
 
-case class Post(objectID: String,
-                postId: Int,
+case class Post(postId: Int,
                 postTitle: String,
                 postDate: Int,
                 postDateFormatted: String,
-                postAuthor: Author,
+                authorName: String,
+                authorImageUrl: String,
                 permalink: String,
-                postMimeType: String,
-                taxonomies: Map[String, String],
+                categories: Iterable[String],
                 image: String,
                 timeToRead: Int,
                 content: String,
                 recordIndex: Int)
-
-case class Author(displayName: String, avatarURL: String)
