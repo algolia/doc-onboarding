@@ -1,0 +1,66 @@
+<ais-instantsearch [config]="config">
+  <main class="search-container">
+    <div class="left-panel">
+
+      <ais-panel header="Categories" id="categories">
+        <ais-refinement-list attribute="categories">
+        </ais-refinement-list>
+      </ais-panel>
+
+      <ais-panel header="Brands" id="brands">
+        <ais-refinement-list attribute="brand" searchable="true" searchPlaceholder="Search for other">
+        </ais-refinement-list>
+      </ais-panel>
+
+      <ais-panel header="Price">
+        <ais-range-slider attribute="price" pips="false">
+        </ais-range-slider>
+      </ais-panel>
+
+
+    </div>
+    <div class="right-panel">
+      <ais-search-box placeholder="Search your CRM" id="searchbox"></ais-search-box>
+      <ais-stats id="stats">
+        <ng-template let-state="state">
+          ⚡️
+          <strong>{{state.nbHits}}</strong> results found in
+          <strong>{{state.processingTimeMS}}ms</strong>
+        </ng-template>
+      </ais-stats>
+      <ais-hits>
+        <ng-template let-hits="hits" let-results="results">
+          <!-- No results message -->
+          <div *ngIf="hits.length === 0">
+            No results found matching
+            <strong>{{results.query}}</strong>.
+          </div>
+
+          <div class="ais-hits" *ngFor="let hit of hits">
+            <div class="hit">
+              <div class="hit-image">
+                <img src="{{hit.image}}" />
+              </div>
+              <div class="hit-content">
+                <div class="hit-name">
+                  <ais-highlight attribute="name" [hit]="hit">
+                  </ais-highlight>
+                </div>
+                <div class="hit-description">
+                  <ais-highlight attribute="description" [hit]="hit">
+                  </ais-highlight>
+                </div>
+                <div class="hit-price">${{hit.price}}</div>
+              </div>
+            </div>
+          </div>
+
+        </ng-template>
+      </ais-hits>
+    </div>
+  </main>
+</ais-instantsearch>
+<footer>Source Code on
+  <a href="#">GitHub</a> - Powered by
+  <a href="https://www.algolia.com">Algolia</a>
+</footer>

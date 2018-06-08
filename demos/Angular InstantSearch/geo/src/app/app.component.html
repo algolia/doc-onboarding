@@ -1,0 +1,66 @@
+<ais-instantsearch [config]="config">
+  <main class="search-container">
+    <div class="left-panel">
+      <ais-hits id="hits" class="ais-Hits">
+        <ng-template let-hits="hits" let-results="results">
+          <div *ngIf="hits.length === 0">
+            No results found matching
+            <strong>{{results.query}}</strong>.
+          </div>
+
+          <div class="ais-Hits-list">
+            <div class="ais-Hits-item" *ngFor="let hit of hits">
+              <div class="hit">
+                <h2 class="hit-name">
+                  <span class="hit-airport-name">
+                    {{hit._highlightResult.name.value}}
+                    <span *ngIf="!hit.displayCity"> {{hit._highlightResult.city.value}}</span>
+                  </span>
+                  <span class="hit-airport-code">
+                    ({{hit._highlightResult.airport_id.value}})
+                  </span>
+                </h2>
+                <p class="hit-location">
+                  {{hit._highlightResult.country.value}}
+                  <span class="hit-distance">({{roundNumber(hit._rankingInfo.matchedGeoLocation.distance / 1000)}} km away)</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ais-hits>
+    </div>
+
+    <div class="right-panel">
+      <ais-search-box placeholder="Search airports by name, city, airport code" id="searchbox"></ais-search-box>
+
+      <ais-stats id="stats">
+        <ng-template let-state="state">
+          ⚡️
+          <strong>{{state.nbHits}}</strong>
+          results found
+
+          <span *ngIf="state.query.trim().length > 0">
+            for
+            <strong>"{{state.query.trim()}}"</strong>
+          </span>
+
+          in
+          <strong>{{state.processingTimeMS}}ms</strong>
+        </ng-template>
+      </ais-stats>
+
+      <ais-geo-hits></ais-geo-hits>
+    </div>
+  </main>
+
+  <ais-pagination id="pagination"></ais-pagination>
+</ais-instantsearch>
+
+<footer>
+  Source Code on
+  <a href="#">
+    GitHub
+  </a>
+  - Powered by <a href="https://www.algolia.com">Algolia</a>
+</footer>
