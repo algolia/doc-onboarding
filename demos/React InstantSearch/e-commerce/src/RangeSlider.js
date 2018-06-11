@@ -63,7 +63,7 @@ class RangeSlider extends Component {
           <div>{currentValues.max}</div>
         </div>
       </div>
-    ) : null;
+    ) : <div className="ais-RefinementList-item">No results.</div>;
   }
 }
 

@@ -12,6 +12,7 @@ import './App.css';
 import Stats from './Stats.js';
 import Hit from './Hit.js';
 import RangeSlider from './RangeSlider.js';
+import Facet from './Facet';
 
 class App extends Component {
   render() {
@@ -30,13 +31,13 @@ class App extends Component {
           <div className="left-panel">
             <div id="categories">
               <Panel header="Categories">
-                <RefinementList attribute="categories" />
+                <Facet attribute="categories"/>
               </Panel>
             </div>
 
             <div id="brands">
               <Panel header="Brands">
-                <RefinementList attribute="brand" searchable={true} />
+                <Facet attribute="brand" searchable={true}/>
               </Panel>
             </div>
 

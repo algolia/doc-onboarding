@@ -9,6 +9,7 @@ import {
 import Stats from './Stats';
 import Switch from './Switch';
 import Hits from './Hits';
+import Facet from './Facet';
 import './App.css';
 
 class App extends Component {
@@ -24,7 +25,7 @@ class App extends Component {
           <div className="left-panel">
             <div id="type">
               <Panel header="Categories">
-                <RefinementList attribute="type" />
+                <Facet attribute="type"/>
               </Panel>
             </div>
           </div>

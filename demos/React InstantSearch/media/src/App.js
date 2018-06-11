@@ -5,12 +5,12 @@ import {
   SearchBox,
   Pagination,
   Configure,
-  RefinementList,
   Panel,
 } from 'react-instantsearch-dom';
 import './App.css';
 import Stats from './Stats.js';
 import Hit from './Hit.js';
+import Facet from './Facet';
 
 class App extends Component {
   render() {
@@ -25,7 +25,7 @@ class App extends Component {
           <div className="left-panel">
             <div id="categories">
               <Panel header="Categories">
-                <RefinementList attribute="categories" />
+                <Facet attribute="categories"/>
               </Panel>
             </div>
           </div>
