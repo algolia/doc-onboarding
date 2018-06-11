@@ -52,7 +52,11 @@
         </div>
       </div>
     </main>
-    <footer>Source Code on <a href="#">GitHub</a></footer>
+    <footer>
+      Source Code on
+      <a href="https://github.com/algolia/doc-onboarding">GitHub</a> | Powered by
+      <a href="https://www.algolia.com">Algolia</a>
+    </footer>
   </ais-index>
 </template>
 

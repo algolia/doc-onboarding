@@ -7,26 +7,21 @@
         </ais-panel>
       </div>
     </div>
-
     <div class="right-panel">
       <ais-search-box placeholder="Search articles" id="searchbox"></ais-search-box>
-
       <ais-stats id="stats">
         <ng-template let-state="state">
           ⚡️
           <strong>{{state.nbHits}}</strong>
           results found
-
           <span *ngIf="state.query.trim().length > 0">
             for
             <strong>"{{state.query.trim()}}"</strong>
           </span>
-
           in
           <strong>{{state.processingTimeMS}}ms</strong>
         </ng-template>
       </ais-stats>
-
       <ais-hits id="hits" class="ais-Hits">
         <ng-template let-hits="hits" let-results="results">
           <div *ngIf="hits.length === 0">
@@ -75,13 +70,10 @@
       </ais-hits>
     </div>
   </main>
-
   <ais-pagination id="pagination"></ais-pagination>
 </ais-instantsearch>
-
 <footer>
   Source Code on
-  <a href="#">
-    GitHub
-  </a>
+  <a href="https://github.com/algolia/doc-onboarding">GitHub</a> | Powered by
+  <a href="https://www.algolia.com">Algolia</a>
 </footer>
