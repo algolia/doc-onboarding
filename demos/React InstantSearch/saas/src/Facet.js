@@ -1,6 +1,6 @@
 import React from 'react';
-import { RefinementList } from 'react-instantsearch-dom';
-import { connectRefinementList } from 'react-instantsearch/connectors'
+import { RefinementList, connectRefinementList } from 'react-instantsearch-dom';
+
 export default connectRefinementList(
   ({ attribute, items }) =>
     items.length && items.length > 0 ? (
@@ -8,4 +8,4 @@ export default connectRefinementList(
     ) : (
       <div className="ais-RefinementList-item">No results.</div>
     )
-)
+);
