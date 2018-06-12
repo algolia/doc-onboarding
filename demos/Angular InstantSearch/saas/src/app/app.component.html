@@ -5,7 +5,6 @@
         <ais-refinement-list attribute="type">
         </ais-refinement-list>
       </ais-panel>
-
     </div>
     <div class="right-panel">
       <ais-search-box placeholder="Search in your CRM" id="searchbox"></ais-search-box>
@@ -58,7 +57,6 @@
               </table>
             </div>
           </div>
-
           <div class="hit" *ngIf="hits['Opportunity']">
             <h2>Opportunities</h2>
             <div class="table-responsive">
@@ -101,7 +99,6 @@
               </table>
             </div>
           </div>
-
           <div class="hit" *ngIf="hits['Account']">
             <h2>Accounts</h2>
             <div class="table-responsive">
@@ -130,7 +127,6 @@
               </table>
             </div>
           </div>
-
           <div class="hit" *ngIf="hits['Lead']">
             <h2>Leads</h2>
             <div class="table-responsive">
@@ -164,7 +160,8 @@
     </div>
   </main>
 </ais-instantsearch>
-<footer>Source Code on
-  <a href="#">GitHub</a> - Powered by
+<footer>
+  Source Code on
+  <a href="https://github.com/algolia/doc-onboarding">GitHub</a> | Powered by
   <a href="https://www.algolia.com">Algolia</a>
 </footer>
