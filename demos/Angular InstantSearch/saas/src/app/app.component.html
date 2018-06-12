@@ -23,7 +23,7 @@
           </div>
         </ng-template>
       </ais-stats>
-      <ais-hits [transformItems]="groupByType">
+      <ais-hits id="hits" [transformItems]="groupByType">
         <ng-template let-hits="hits" let-results="results">
           <div *ngIf="hits.isEmpty">
             No results found for
