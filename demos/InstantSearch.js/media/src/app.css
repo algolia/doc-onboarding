@@ -30,9 +30,10 @@ a {
   color: #5468ff;
 }
 
-.highlight {
+em {
   font-style: normal;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 .search-container {

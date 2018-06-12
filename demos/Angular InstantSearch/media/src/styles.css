@@ -27,8 +27,27 @@ body {
   flex-direction: column;
 }
 
+app-root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+ais-instantsearch {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 a {
   color: #5468ff;
+}
+
+em {
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .search-container {
@@ -90,34 +109,38 @@ a {
   width: 100%;
 }
 
-.ais-SearchBox-submitIcon,
-.ais-SearchBox-resetIcon {
+.ais-SearchBox-submit,
+.ais-SearchBox-reset {
   position: absolute;
   top: 0;
-  right: 0;
   left: inherit;
-  margin: 13px 10px;
+  margin: 14px 16px;
+  padding: 0;
+  background: none;
+  border: none;
   cursor: pointer;
 }
 
-.ais-SearchBox-submitIcon,
-.ais-SearchBox-resetIcon{
+.ais-SearchBox-submit svg,
+.ais-SearchBox-reset svg {
   width: 13px;
   height: 13px;
   display: block;
-  right: 0;
-  left: unset;
 }
 
-.ais-SearchBox-submitIcon path {
-  fill: hsl(233, 100%, 66%);
+.ais-SearchBox-submit svg {
+  fill: #5468ff;
 }
 
-.ais-SearchBox-resetIcon path {
+.ais-SearchBox-reset svg {
   fill: #ed5a6a;
 }
 
-.ais-SearchBox-resetIcon {
+.ais-SearchBox-submit {
+  right: 0;
+}
+
+.ais-SearchBox-reset {
   background: none;
   padding: 0;
   border: none;
@@ -130,7 +153,8 @@ a {
   font-weight: normal;
   border: 0;
   font-size: 14px;
-  line-height: 24px;
+  font-family: inherit;
+  line-height: inherit;
 }
 
 #stats {
@@ -239,14 +263,9 @@ a {
   border-bottom: 1px solid #eee;
 }
 
-.ais-RefinementList-list {
-  padding-top: 8px;
-}
-
 .ais-RefinementList-item {
   padding: 8px 16px;
   line-height: 24px;
-
 }
 
 .ais-RefinementList-labelText,
@@ -256,7 +275,7 @@ a {
 
 .ais-RefinementList-checkbox {
   margin: 0;
-  margin-right: 5px;
+  margin-right: 9px;
 }
 
 .ais-RefinementList-count {
@@ -273,7 +292,7 @@ a {
   font-weight: 700;
 }
 
-.ais-Pagination {
+.ais-Pagination-list {
   display: flex;
   margin: 0 0 16px;
   padding: 0;

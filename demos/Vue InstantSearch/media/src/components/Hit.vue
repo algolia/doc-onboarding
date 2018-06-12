@@ -27,7 +27,7 @@
               </div>
               <div class="post-meta-info">
                 {{ result.time_to_read }} min read in
-                <span v-html="result._highlightResult.categories[0].value"></span>
+                <span :key="item.id" v-for="(item, index) in result._highlightResult.categories" v-html="`${item.value}${index !== result._highlightResult.categories.length - 1 ? ', ' : ''}`"></span>
               </div>
             </div>
           </div>

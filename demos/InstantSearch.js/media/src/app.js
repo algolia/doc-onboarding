@@ -7,9 +7,7 @@ const search = instantsearch({
   searchParameters: {
     hitsPerPage: 3,
     attributesToSnippet: ["content:14"],
-    snippetEllipsisText: " [...]",
-    highlightPreTag: "<em class='highlight'>",
-    highlightPostTag: "</em>"
+    snippetEllipsisText: " [...]"
   }
 });
 
@@ -25,46 +23,9 @@ search.addWidget(
   instantsearch.widgets.hits({
     container: "#hits",
     templates: {
-      empty: "No results.",
+      empty: "No results found.",
       item(hit) {
-        return `
-          <div>
-            <article>
-              <div class="post-img">
-                <a href="${hit.permalink}">
-                <img src="${hit.image}">
-                </a>
-              </div>
-              <div class="post-content">
-                <div class="post-date">
-                  ${hit.post_date_formatted}
-                </div>
-                <h2 class="entry-title">
-                  <a href="${hit.permalink}" rel="bookmark">
-                  ${hit._highlightResult.post_title.value}
-                  </a>
-                </h2>
-                <div class="post-excerpt">
-                  ${hit._snippetResult.content.value}
-                </div>
-                <div class="entry-meta clear">
-                  <div class="author-gravatar">
-                    <img src="${hit.author_image_url}" width="40" height="40">
-                  </div>
-                  <div class="entry-author-content">
-                    <div class="author-name">
-                      ${hit._highlightResult.author_name.value}
-                    </div>
-                    <div class="post-meta-info">
-                      ${hit.time_to_read} min read in ${
-          hit._highlightResult.categories[0].value
-        }
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>`;
+        return hitTemplate(hit);
       }
     }
   })
@@ -101,3 +62,46 @@ search.addWidget(
 );
 
 search.start();
+
+const hitTemplate = hit => {
+  return `
+    <div>
+      <article>
+        <div class="post-img">
+          <a href="${hit.permalink}">
+          <img src="${hit.image}">
+          </a>
+        </div>
+        <div class="post-content">
+          <div class="post-date">
+            ${hit.post_date_formatted}
+          </div>
+          <h2 class="entry-title">
+            <a href="${hit.permalink}" rel="bookmark">
+            ${hit._highlightResult.post_title.value}
+            </a>
+          </h2>
+          <div class="post-excerpt">
+            ${hit._snippetResult.content.value}
+          </div>
+          <div class="entry-meta clear">
+            <div class="author-gravatar">
+              <img src="${hit.author_image_url}" width="40" height="40">
+            </div>
+            <div class="entry-author-content">
+              <div class="author-name">
+                ${hit._highlightResult.author_name.value}
+              </div>
+              <div class="post-meta-info">
+                ${
+                  hit.time_to_read
+                } min read in ${hit._highlightResult.categories
+    .map(x => x.value)
+    .join(", ")}
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>`;
+};

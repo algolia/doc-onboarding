@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 * {
   box-sizing: border-box;
@@ -20,11 +20,20 @@ body {
   font-size: 14px;
   line-height: 24px;
   overflow-y: scroll;
-  font-family: "Open Sans", sans-serif;
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
   background: #f0f2f5;
+  flex-direction: column;
 }
 
-[class^="ais-"] {
+.ais-index {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+[class^='ais-'] {
   font-size: inherit;
 }
 
@@ -38,17 +47,10 @@ em {
   text-decoration: underline;
 }
 
-.ais-index {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
 .search-container {
   flex-grow: 1;
   display: flex;
   width: 960px;
-  min-height: 100%;
   margin: 0 auto;
 }
 
@@ -280,7 +282,7 @@ em {
 }
 
 .ais-refinement-list__checkbox {
-  margin: 0 4px 0 0;
+  margin: 0 9px 0 0;
 }
 
 .ais-refinement-list__item--active .ais-refinement-list__label {
@@ -376,21 +378,21 @@ footer {
 }
 
 #searchbox:empty:before {
-  content: "Uncomment the searchBox widget to add a search bar.";
+  content: 'Uncomment the searchBox widget to add a search bar.';
 }
 
 #hits:empty:before {
-  content: "Uncomment the hits widget to add hits list.";
+  content: 'Uncomment the hits widget to add hits list.';
 }
 
 #stats:empty:before {
-  content: "Uncomment the stats widget to add search stats.";
+  content: 'Uncomment the stats widget to add search stats.';
 }
 
 #categories:empty:before {
-  content: "Uncomment the categories widget to add categories stats.";
+  content: 'Uncomment the categories widget to add categories stats.';
 }
 
 #pagination:empty:before {
-  content: "Uncomment the pagination widget to add pagination.";
+  content: 'Uncomment the pagination widget to add pagination.';
 }
