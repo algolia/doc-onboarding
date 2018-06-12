@@ -307,7 +307,7 @@ em {
 }
 
 .ais-Pagination-item,
-.ais-Pagination-item__disabled {
+.ais-Pagination-item--disabled {
   flex: 0 0 40px;
   width: auto;
   height: auto;
@@ -321,7 +321,7 @@ em {
   transition: all 0.1s linear;
 }
 
-.ais-Pagination-item__disabled {
+.ais-Pagination-item--disabled {
   display: none;
 }
 
@@ -331,7 +331,7 @@ em {
 }
 
 .ais-Pagination-item .ais-Pagination-link,
-.ais-Pagination-item__disabled .ais-Pagination-link {
+.ais-Pagination-item--disabled .ais-Pagination-link {
   text-decoration: none;
   color: #fff;
   line-height: 32px;
