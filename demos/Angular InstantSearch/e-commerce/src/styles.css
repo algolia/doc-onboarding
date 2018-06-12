@@ -240,10 +240,6 @@ em {
   border-bottom: 1px solid #eee;
 }
 
-.ais-RefinementList-list {
-  padding-top: 8px;
-}
-
 .ais-RefinementList-item {
   padding: 8px 16px;
   line-height: 24px;
@@ -271,6 +267,10 @@ em {
 .ais-RefinementList-item--selected .ais-RefinementList-labelText,
 .ais-RefinementList-item--selected .ais-RefinementList-count {
   font-weight: 700;
+}
+
+.ais-RefinementList-searchBox .ais-SearchBox {
+  margin-bottom: 0;
 }
 
 .ais-Pagination-list {

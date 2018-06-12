@@ -242,7 +242,7 @@ em {
 }
 
 .ais-refinement-list--checkbox {
-  margin: 0;
+  margin: 0 5px 0 0;
 }
 
 .ais-refinement-list--item__active .ais-refinement-list--label,
