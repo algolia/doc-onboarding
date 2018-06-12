@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   InstantSearch,
   Configure,
   RefinementList,
   Panel,
-  SearchBox,
-} from 'react-instantsearch-dom';
-import Stats from './Stats';
-import Switch from './Switch';
-import Hits from './Hits';
-import Facet from './Facet';
-import './App.css';
+  SearchBox
+} from "react-instantsearch-dom";
+import Stats from "./Stats";
+import Switch from "./Switch";
+import Hits from "./Hits";
+import Facet from "./Facet";
+import "./App.css";
 
 class App extends Component {
   render() {
@@ -25,13 +25,13 @@ class App extends Component {
           <div className="left-panel">
             <div id="type">
               <Panel header="Categories">
-                <Facet attribute="type"/>
+                <Facet attribute="type" />
               </Panel>
             </div>
           </div>
           <div className="right-panel">
             <div id="searchbox">
-              <SearchBox translations={{ placeholder: 'Search in your CRM' }} />
+              <SearchBox translations={{ placeholder: "Search in your CRM" }} />
             </div>
             <div id="stats">
               <Switch

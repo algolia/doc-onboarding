@@ -11,19 +11,25 @@
       <ais-search-box placeholder="Search in your CRM" id="searchbox"></ais-search-box>
       <ais-stats id="stats">
         <ng-template let-state="state">
-          ⚡️
-          <strong>{{state.nbHits}}</strong> results found in
-          <strong>{{state.processingTimeMS}}ms</strong>
+          <div *ngIf="state.nbHits > 0">
+            ⚡️
+            <strong>{{state.nbHits}}</strong>
+            results found
+            <span *ngIf="state.query.trim().length > 0">
+              for
+              <strong>"{{state.query.trim()}}"</strong>
+            </span>
+            in
+            <strong>{{state.processingTimeMS}}ms</strong>
+          </div>
         </ng-template>
       </ais-stats>
       <ais-hits [transformItems]="groupByType">
         <ng-template let-hits="hits" let-results="results">
-          <!-- No results message -->
           <div *ngIf="hits.isEmpty">
-            No results found matching
+            No results found for
             <strong>{{results.query}}</strong>.
           </div>
-
           <div class="hit" *ngIf="hits['Contact']">
             <h2>Contacts</h2>
             <div class="table-responsive">

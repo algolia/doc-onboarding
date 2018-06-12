@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
 * {
   box-sizing: border-box;
@@ -21,17 +21,34 @@ body {
   line-height: 24px;
   overflow-y: scroll;
   display: flex;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background: #f0f2f5;
   flex-direction: column;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.ais-InstantSearch__root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 a {
   color: #5468ff;
 }
 
-#root,
-.ais-InstantSearch__root,
+em {
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .search-container {
   flex-grow: 1;
   display: flex;
@@ -235,8 +252,11 @@ a {
 }
 
 .ais-RefinementList-checkbox {
-  margin-right: 8px;
-  margin-left: 0;
+  margin: 0;
+}
+
+.ais-RefinementList-labelText {
+  margin-left: 0.6em;
 }
 
 .ais-RefinementList-count {
@@ -289,17 +309,17 @@ footer {
 }
 
 #searchbox:empty:before {
-  content: 'Uncomment the searchBox widget to add a search bar.';
+  content: "Uncomment the searchBox widget to add a search bar.";
 }
 
 #hits:empty:before {
-  content: 'Uncomment the hits widget to add hits list.';
+  content: "Uncomment the hits widget to add hits list.";
 }
 
 #stats:empty:before {
-  content: 'Uncomment the stats widget to add search stats.';
+  content: "Uncomment the stats widget to add search stats.";
 }
 
 #type:empty:before {
-  content: 'Uncomment the types widget to add types stats.';
+  content: "Uncomment the types widget to add types stats.";
 }

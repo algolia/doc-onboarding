@@ -30,6 +30,12 @@ a {
   color: #5468ff;
 }
 
+em {
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .search-container {
   flex-grow: 1;
   display: flex;
@@ -87,6 +93,7 @@ a {
   position: relative;
   height: auto;
   width: 100%;
+  max-width: 100%;
 }
 
 .ais-search-box--magnifier,

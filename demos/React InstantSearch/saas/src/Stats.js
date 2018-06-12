@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { connectStateResults } from 'react-instantsearch-dom';
+import React from "react";
+import PropTypes from "prop-types";
+import { connectStateResults } from "react-instantsearch-dom";
 
 const Stats = ({ searchState, searchResults }) => {
   const { query } = searchState;
@@ -10,14 +10,14 @@ const Stats = ({ searchState, searchResults }) => {
       <div className="ais-Stats">
         <span role="img" aria-label="Lighting fast">
           ⚡️
-        </span>{' '}
-        <strong>{searchResults.nbHits}</strong> results found
+        </span>{" "}
+        <strong>{searchResults.nbHits}</strong> results found{" "}
         {query && (
           <span>
             for <strong>&quot;{query}&quot;</strong>
           </span>
-        )}{' '}
-        in {searchResults.processingTimeMS}ms
+        )}{" "}
+        in <strong>{searchResults.processingTimeMS}ms</strong>
       </div>
     )
   );
@@ -25,7 +25,7 @@ const Stats = ({ searchState, searchResults }) => {
 
 Stats.propTypes = {
   searchState: PropTypes.object,
-  searchResults: PropTypes.object,
+  searchResults: PropTypes.object
 };
 
 export default connectStateResults(Stats);

@@ -1,110 +1,110 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Highlight, connectHits } from 'react-instantsearch-dom';
+import React from "react";
+import PropTypes from "prop-types";
+import { Highlight, connectHits } from "react-instantsearch-dom";
 
 const data = {
   Contact: {
-    title: 'Contacts',
+    title: "Contacts",
     columns: [
       {
-        attribute: 'Name',
-        title: 'Name',
-        isHighlighted: true,
+        attribute: "Name",
+        title: "Name",
+        isHighlighted: true
       },
       {
-        attribute: 'Account',
-        title: 'Account',
-        isHighlighted: true,
+        attribute: "Account",
+        title: "Account",
+        isHighlighted: true
       },
       {
-        attribute: 'Email',
-        title: 'Email',
-        isHighlighted: true,
-      },
-    ],
+        attribute: "Email",
+        title: "Email",
+        isHighlighted: true
+      }
+    ]
   },
   Opportunity: {
-    title: 'Opportunities',
+    title: "Opportunities",
     columns: [
       {
-        attribute: 'Name',
-        title: 'Name',
-        isHighlighted: true,
+        attribute: "Name",
+        title: "Name",
+        isHighlighted: true
       },
       {
-        attribute: 'Account',
-        title: 'Account',
-        isHighlighted: true,
+        attribute: "Account",
+        title: "Account",
+        isHighlighted: true
       },
       {
-        attribute: 'Owner',
-        title: 'Owner',
-        isHighlighted: true,
+        attribute: "Owner",
+        title: "Owner",
+        isHighlighted: true
       },
       {
-        attribute: 'CloseDate',
-        title: 'Close date',
-        isHighlighted: false,
+        attribute: "CloseDate",
+        title: "Close date",
+        isHighlighted: false
       },
       {
-        attribute: 'StageName',
-        title: 'Stage name',
-        isHighlighted: false,
+        attribute: "StageName",
+        title: "Stage name",
+        isHighlighted: false
       },
       {
-        attribute: 'Amount',
-        title: 'Amount',
-        isHighlighted: false,
-      },
-    ],
+        attribute: "Amount",
+        title: "Amount",
+        isHighlighted: false
+      }
+    ]
   },
   Account: {
-    title: 'Accounts',
+    title: "Accounts",
     columns: [
       {
-        attribute: 'Name',
-        title: 'Name',
-        isHighlighted: true,
+        attribute: "Name",
+        title: "Name",
+        isHighlighted: true
       },
       {
-        attribute: 'Website',
-        title: 'Website',
-        isHighlighted: true,
+        attribute: "Website",
+        title: "Website",
+        isHighlighted: true
       },
       {
-        attribute: 'Owner',
-        title: 'Owner',
-        isHighlighted: true,
-      },
-    ],
+        attribute: "Owner",
+        title: "Owner",
+        isHighlighted: true
+      }
+    ]
   },
   Lead: {
-    title: 'Leads',
+    title: "Leads",
     columns: [
       {
-        attribute: 'Name',
-        title: 'Name',
-        isHighlighted: true,
+        attribute: "Name",
+        title: "Name",
+        isHighlighted: true
       },
       {
-        attribute: 'Email',
-        title: 'Email',
-        isHighlighted: true,
+        attribute: "Email",
+        title: "Email",
+        isHighlighted: true
       },
       {
-        attribute: 'Owner',
-        title: 'Owner',
-        isHighlighted: true,
-      },
-    ],
-  },
+        attribute: "Owner",
+        title: "Owner",
+        isHighlighted: true
+      }
+    ]
+  }
 };
 
 const Hits = ({ hits }) => {
   const tables = hits.reduce(
     (acc, hit) => ({
       ...acc,
-      [hit.type]: acc[hit.type] ? acc[hit.type].concat(hit) : [hit],
+      [hit.type]: acc[hit.type] ? acc[hit.type].concat(hit) : [hit]
     }),
     {}
   );
@@ -146,7 +146,7 @@ const Hits = ({ hits }) => {
 };
 
 Hits.propTypes = {
-  hits: PropTypes.arrayOf(PropTypes.object).isRequired,
+  hits: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default connectHits(Hits);
