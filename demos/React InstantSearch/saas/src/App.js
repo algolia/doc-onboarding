@@ -2,13 +2,12 @@ import React, { Component } from "react";
 import {
   InstantSearch,
   Configure,
-  RefinementList,
   Panel,
   SearchBox
 } from "react-instantsearch-dom";
 import Stats from "./Stats";
 import Switch from "./Switch";
-import Hits from "./Hits";
+import Content from "./Content";
 import Facet from "./Facet";
 import "./App.css";
 
@@ -34,13 +33,10 @@ class App extends Component {
               <SearchBox translations={{ placeholder: "Search in your CRM" }} />
             </div>
             <div id="stats">
-              <Switch
-                hasResultsElement={<Stats />}
-                noResultsElement={<p>No results.</p>}
-              />
+              <Stats />
             </div>
             <div id="hits">
-              <Hits />
+              <Content />
             </div>
           </div>
         </main>
