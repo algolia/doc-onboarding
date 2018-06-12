@@ -1,18 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   InstantSearch,
-  Hits,
   SearchBox,
   Pagination,
   Configure,
-  RefinementList,
-  Panel,
-} from 'react-instantsearch-dom';
-import './App.css';
-import Stats from './Stats.js';
-import Hit from './Hit.js';
-import RangeSlider from './RangeSlider.js';
-import Facet from './Facet';
+  Panel
+} from "react-instantsearch-dom";
+import "./App.css";
+import Stats from "./Stats.js";
+import RangeSlider from "./RangeSlider.js";
+import Content from "./Content";
+import Facet from "./Facet";
 
 class App extends Component {
   render() {
@@ -25,22 +23,24 @@ class App extends Component {
         <main className="search-container">
           <Configure
             hitsPerPage={5}
-            attributesToSnippet={['description:24']}
+            attributesToSnippet={["description:24"]}
             snippetEllipsisText=" [...]"
           />
           <div className="left-panel">
             <div id="categories">
               <Panel header="Categories">
-                <Facet attribute="categories"/>
+                <Facet attribute="categories" />
               </Panel>
             </div>
-
             <div id="brands">
               <Panel header="Brands">
-                <Facet attribute="brand" searchable={true}/>
+                <Facet
+                  attribute="brand"
+                  searchable={true}
+                  translations={{ placeholder: "Search for other..." }}
+                />
               </Panel>
             </div>
-
             <div id="price">
               <Panel header="Price">
                 <RangeSlider attribute="price" />
@@ -50,14 +50,14 @@ class App extends Component {
           <div className="right-panel">
             <div id="searchbox">
               <SearchBox
-                translations={{ placeholder: 'Search for products' }}
+                translations={{ placeholder: "Search for products" }}
               />
             </div>
             <div id="stats">
               <Stats />
             </div>
             <div id="hits">
-              <Hits hitComponent={Hit} />
+              <Content />
             </div>
             <div id="pagination">
               <Pagination />

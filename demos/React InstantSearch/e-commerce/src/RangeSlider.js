@@ -1,9 +1,9 @@
 // Here's an example showing how to connect the airbnb rheostat slider to React InstantSearch using the
 // range connector
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { connectRange } from 'react-instantsearch-dom';
-import Rheostat from 'rheostat';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { connectRange } from "react-instantsearch-dom";
+import Rheostat from "rheostat";
 
 class RangeSlider extends Component {
   static propTypes = {
@@ -11,7 +11,7 @@ class RangeSlider extends Component {
     max: PropTypes.number,
     currentRefinement: PropTypes.object,
     refine: PropTypes.func.isRequired,
-    canRefine: PropTypes.bool.isRequired,
+    canRefine: PropTypes.bool.isRequired
   };
 
   state = { currentValues: { min: this.props.min, max: this.props.max } };
@@ -21,15 +21,15 @@ class RangeSlider extends Component {
       this.setState({
         currentValues: {
           min: sliderState.currentRefinement.min,
-          max: sliderState.currentRefinement.max,
-        },
+          max: sliderState.currentRefinement.max
+        }
       });
     }
   }
 
   onValuesUpdated = sliderState => {
     this.setState({
-      currentValues: { min: sliderState.values[0], max: sliderState.values[1] },
+      currentValues: { min: sliderState.values[0], max: sliderState.values[1] }
     });
   };
 
@@ -40,7 +40,7 @@ class RangeSlider extends Component {
     ) {
       this.props.refine({
         min: sliderState.values[0],
-        max: sliderState.values[1],
+        max: sliderState.values[1]
       });
     }
   };
@@ -49,7 +49,7 @@ class RangeSlider extends Component {
     const { min, max, currentRefinement } = this.props;
     const { currentValues } = this.state;
     return min !== max ? (
-      <div>
+      <div className="ais-RangeSlider-wrapper">
         <Rheostat
           className="ais-RangeSlider"
           min={min}
@@ -58,12 +58,14 @@ class RangeSlider extends Component {
           onChange={this.onChange}
           onValuesUpdated={this.onValuesUpdated}
         />
-        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div className="ais-RangeSlider-numbers">
           <div>{currentValues.min}</div>
           <div>{currentValues.max}</div>
         </div>
       </div>
-    ) : <div className="ais-RefinementList-item">No results.</div>;
+    ) : (
+      <div className="ais-RefinementList-item">No results.</div>
+    );
   }
 }
 

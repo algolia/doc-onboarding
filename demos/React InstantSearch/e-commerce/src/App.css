@@ -26,8 +26,17 @@ body {
   flex-direction: column;
 }
 
-[class^=ais-] {
-  font-size: inherit;
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.ais-InstantSearch__root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 a {
@@ -62,7 +71,6 @@ a {
 }
 
 #brands .ais-SearchBox-input {
-  padding: 8px 16px 8px 24px;
   box-shadow: none;
   border-bottom: 1px solid #eee;
   border-radius: 0;
@@ -167,6 +175,7 @@ a {
   border: none;
   font-family: inherit;
   line-height: inherit;
+  font-size: inherit;
 }
 
 #stats {
@@ -273,7 +282,7 @@ a {
 }
 
 .ais-RefinementList-labelText {
-  margin-left: .5em;
+  margin-left: 0.6em;
 }
 
 .ais-RefinementList-item--selected .ais-RefinementList-labelText,
@@ -289,8 +298,21 @@ a {
   margin-left: -10px;
 }
 
+.ais-RangeSlider-wrapper {
+  position: relative;
+}
+
 .ais-RangeSlider {
-  margin: 32px 16px;
+  margin: 30px 45px;
+}
+
+.ais-RangeSlider-numbers {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: -10px;
+  padding: 0 5px;
+  width: 100%;
 }
 
 .ais-RangeSlider .rheostat-horizontal .rheostat-handle {

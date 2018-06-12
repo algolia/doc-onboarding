@@ -7,9 +7,7 @@ const search = instantsearch({
   searchParameters: {
     hitsPerPage: 5,
     attributesToSnippet: ["description:24"],
-    snippetEllipsisText: " [...]",
-    highlightPreTag: "<em class='highlight'>",
-    highlightPostTag: "</em>"
+    snippetEllipsisText: " [...]"
   }
 });
 
@@ -27,20 +25,7 @@ search.addWidget(
     templates: {
       empty: "No results.",
       item: function(hit) {
-        return `
-          <div class="hit">
-            <div class="hit-image">
-              <img src="${hit.image}" />
-            </div>
-            <div class="hit-content">
-              <div class="hit-name">${hit._highlightResult.name.value}</div>
-              <div class="hit-description">${
-                hit._snippetResult.description.value
-              }</div>
-              <div class="hit-price">$${hit.price}</div>
-            </div>
-          </div>
-        `;
+        return hitTemplate(hit);
       }
     }
   })
@@ -50,13 +35,10 @@ search.addWidget(
   instantsearch.widgets.stats({
     container: "#stats",
     templates: {
-      body: function(hit) {
-        let typedQuery = hit.query != "" ? `for <b>"${hit.query}"</b>` : ``;
-        return `<div>⚡️ <b>${
-          hit.nbHits
-        }</b> results found ${typedQuery} in <b>${
-          hit.processingTimeMS
-        }ms</b></div>`;
+      body(hit) {
+        return `⚡️ <strong>${hit.nbHits}</strong> results found ${
+          hit.query != "" ? `for <strong>"${hit.query}"</strong>` : ``
+        } in <strong>${hit.processingTimeMS}ms</strong>`;
       }
     }
   })
@@ -86,7 +68,7 @@ search.addWidget(
     searchForFacetValues: true,
     autoHideContainer: false,
     templates: {
-      header: "Brands",
+      header: "Brands"
     }
   })
 );
@@ -103,3 +85,22 @@ search.addWidget(
 );
 
 search.start();
+
+const hitTemplate = hit => {
+  return `
+    <div class="hit">
+      <div class="hit-image">
+        <img src="${hit.image}" />
+      </div>
+      <div class="hit-content">
+        <div>
+          <div class="hit-name">${hit._highlightResult.name.value}</div>
+          <div class="hit-description">${
+            hit._snippetResult.description.value
+          }</div>
+        </div>
+        <div class="hit-price">$${hit.price}</div>
+      </div>
+    </div>
+  `;
+};
