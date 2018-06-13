@@ -18,5 +18,6 @@
   },
   "devDependencies": {
     "prop-types": "^15.6.1"
-  }
+  },
+  "main": "src/App.js"
 }
