@@ -4,28 +4,28 @@
 
 ### Media
 
-- [InstantSearch.js](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/InstantSearch.js/media)
-- [React InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/React%20InstantSearch/media)
-- [Vue InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/Vue%20InstantSearch/media)
-- [Angular InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/Angular%20InstantSearch/media)
+- [InstantSearch.js](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/instantsearchjs/media)
+- [React InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/react/media)
+- [Vue InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/vue/media)
+- [Angular InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/angular/media)
 
 ### Saas
 
-- [InstantSearch.js](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/InstantSearch.js/saas)
-- [React InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/React%20InstantSearch/saas)
-- [Vue InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/Vue%20InstantSearch/saas)
-- [Angular InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/Angular%20InstantSearch/saas)
+- [InstantSearch.js](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/instantsearchjs/saas)
+- [React InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/react/saas)
+- [Vue InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/vue/saas)
+- [Angular InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/angular/saas)
 
 ### E-commerce
 
-- [InstantSearch.js](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/InstantSearch.js/e-commerce)
-- [React InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/React%20InstantSearch/e-commerce)
-- [Vue InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/Vue%20InstantSearch/e-commerce)
-- [Angular InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/Angular%20InstantSearch/e-commerce)
+- [InstantSearch.js](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/instantsearchjs/ecommerce)
+- [React InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/react/ecommerce)
+- [Vue InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/vue/ecommerce)
+- [Angular InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/angular/ecommerce)
 
 ### Geo
 
-- [InstantSearch.js](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/InstantSearch.js/geo)
-- [React InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/React%20InstantSearch/geo)
-- [Vue InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/Vue%20InstantSearch/geo)
-- [Angular InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/Angular%20InstantSearch/geo)
+- [InstantSearch.js](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/instantsearchjs/geo)
+- [React InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/react/geo)
+- [Vue InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/vue/geo)
+- [Angular InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/angular/geo)
