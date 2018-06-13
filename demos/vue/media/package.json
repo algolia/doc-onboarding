@@ -1,5 +1,5 @@
 {
-  "name": "media-vue",
+  "name": "algolia-instantsearch-vue-media",
   "version": "1.0.0",
   "private": true,
   "scripts": {
