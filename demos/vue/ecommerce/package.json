@@ -22,6 +22,5 @@
     "vue-template-compiler": "2.5.16",
     "webpack": "3.11.0",
     "webpack-dev-server": "2.11.2"
-  },
-  "main": "src/App.vue"
+  }
 }

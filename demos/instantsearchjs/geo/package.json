@@ -8,6 +8,5 @@
   },
   "devDependencies": {
     "parcel-bundler": "^1.8.1"
-  },
-  "main": "src/app.js"
+  }
 }
