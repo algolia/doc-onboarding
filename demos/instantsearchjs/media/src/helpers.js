@@ -1,4 +1,4 @@
-const hitTemplate = hit => {
+export function hitTemplate(hit) {
   return `
     <div>
       <article>
@@ -39,4 +39,4 @@ const hitTemplate = hit => {
         </div>
       </article>
     </div>`;
-};
+}
