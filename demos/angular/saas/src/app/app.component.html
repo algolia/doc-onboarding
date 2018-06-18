@@ -115,8 +115,10 @@
                       </ais-highlight>
                     </td>
                     <td>
-                      <ais-highlight attribute="Website" [hit]="hit">
-                      </ais-highlight>
+                      <span *ngIf="hit.Website">
+                        <ais-highlight attribute="Website" [hit]="hit">
+                        </ais-highlight>
+                      </span>
                     </td>
                     <td>
                       <ais-highlight attribute="Owner" [hit]="hit">
