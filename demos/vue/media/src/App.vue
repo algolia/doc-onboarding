@@ -10,17 +10,14 @@
     }"
   >
     <main class="search-container">
-      <div class="left-panel">
-        <div id="categories">
-          <refinement-list attribute-name="categories" header-title="Categories"/>
-        </div>
-      </div>
       <div class="right-panel">
         <div id="searchbox">
-          <ais-search-box placeholder="Search articles" class="ais-search-box"/>
+          <!-- Uncomment the following widget to add a search bar  -->
+          <!-- <ais-search-box placeholder="Search articles" class="ais-search-box"/> -->
         </div>
         <div id="stats">
-          <div>
+          <!-- Uncomment the following widget to add search stats -->
+          <!-- <div>
             <ais-stats>
               <template slot-scope="{ totalResults, processingTime, query, resultStart, resultEnd }">
                 ⚡️ <strong>{{ totalResults }}</strong> results found
@@ -28,10 +25,11 @@
                 in <strong>{{ processingTime }}ms</strong>
               </template>
             </ais-stats>
-          </div>
+          </div> -->
         </div>
         <div id="hits">
-          <ais-results class="ais-hits">
+          <!-- Uncomment the following widget to add hits list -->
+          <!-- <ais-results class="ais-hits">
             <template slot-scope="{ result }">
               <hit :result="result"/>
             </template>
@@ -40,15 +38,22 @@
             <template slot-scope="props">
               No results found for <strong>{{ props.query }}</strong>.
             </template>
-          </ais-no-results>
+          </ais-no-results> -->
         </div>
         <div id="pagination">
-          <ais-pagination>
+          <!-- Uncomment the following widget to add pagination -->
+          <!-- <ais-pagination>
             <template slot="first">«</template>
             <template slot="previous">‹</template>
             <template slot="next">›</template>
             <template slot="last">»</template>
-          </ais-pagination>
+          </ais-pagination> -->
+        </div>
+      </div>
+      <div class="left-panel">
+        <div id="categories">
+          <!-- Uncomment the following widget to add categories list -->
+          <!-- <refinement-list attribute-name="categories" header-title="Categories"/> -->
         </div>
       </div>
     </main>

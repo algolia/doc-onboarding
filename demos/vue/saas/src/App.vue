@@ -8,17 +8,14 @@
     }"
   >
     <main class="search-container">
-      <div class="left-panel">
-        <div id="type">
-          <refinement-list attribute-name="type" header-title="Categories"/>
-        </div>
-      </div>
       <div class="right-panel">
         <div id="searchbox">
-          <ais-search-box placeholder="Search in your CRM" class="ais-search-box"/>
+          <!-- Uncomment the following widget to add a search bar  -->
+          <!-- <ais-search-box placeholder="Search in your CRM" class="ais-search-box"/> -->
         </div>
         <div id="stats">
-          <div>
+          <!-- Uncomment the following widget to add search stats -->
+          <!-- <div>
             <ais-stats>
               <template slot-scope="{ totalResults, processingTime, query, resultStart, resultEnd }">
                 ⚡️ <strong>{{ totalResults }}</strong> results found
@@ -26,15 +23,22 @@
                 in <strong>{{ processingTime }}ms</strong>
               </template>
             </ais-stats>
-          </div>
+          </div> -->
         </div>
         <div id="hits">
-          <table-results attribute-for-distinct="type"/>
+          <!-- Uncomment the following widget to add hits list -->
+          <!-- <table-results attribute-for-distinct="type"/>
           <ais-no-results>
             <template slot-scope="props">
               No results found for <strong>{{ props.query }}</strong>.
             </template>
-          </ais-no-results>
+          </ais-no-results> -->
+        </div>
+      </div>
+      <div class="left-panel">
+        <div id="type">
+          <!-- Uncomment the following widget to add types list -->
+          <!-- <refinement-list attribute-name="type" header-title="Categories"/> -->
         </div>
       </div>
     </main>
