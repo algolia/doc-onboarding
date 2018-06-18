@@ -54,6 +54,7 @@ em {
 .search-container {
   flex-grow: 1;
   display: flex;
+  flex-direction: row-reverse;
   width: 960px;
   min-height: 100%;
   margin: 0 auto;
@@ -103,6 +104,12 @@ em {
 #brands {
   margin-bottom: 24px;
   display: block;
+}
+
+#categories,
+#brands,
+#price {
+  margin-right: 24px;
 }
 
 #searchbox,
@@ -374,8 +381,11 @@ footer {
 
 #searchbox:empty:before,
 #hits:empty:before,
-#type:empty:before,
-#stats:empty:before {
+#categories:empty:before,
+#brands:empty:before,
+#price:empty:before,
+#stats:empty:before,
+#pagination:empty:before {
   display: block;
   color: #999;
   padding: 16px;
@@ -383,8 +393,11 @@ footer {
 
 #searchbox:empty,
 #hits:empty,
-#type:empty,
-#stats:empty {
+#categories:empty,
+#brands:empty,
+#price:empty,
+#stats:empty,
+#pagination:empty {
   padding: 0;
   background: none;
   border: dashed 3px #ddd;
@@ -394,7 +407,8 @@ footer {
 
 #searchbox:empty,
 #stats:empty,
-#hits:empty {
+#hits:empty,
+#pagination:empty {
   margin-bottom: 24px;
 }
 
@@ -410,6 +424,18 @@ footer {
   content: "Uncomment the stats widget to add search stats.";
 }
 
-#type:empty:before {
-  content: "Uncomment the types widget to add types stats.";
+#categories:empty:before {
+  content: "Uncomment the categories widget to add categories list.";
+}
+
+#brands:empty:before {
+  content: "Uncomment the brands widget to add brands list.";
+}
+
+#price:empty:before {
+  content: "Uncomment the price widget to add price list.";
+}
+
+#pagination:empty:before {
+  content: "Uncomment the pagination widget to add pagination.";
 }
