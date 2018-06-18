@@ -366,7 +366,7 @@ footer {
 }
 
 #categories:empty:before {
-  content: "Uncomment the categories widget to add categories stats.";
+  content: "Uncomment the categories widget to add categories list.";
 }
 
 #pagination:empty:before {

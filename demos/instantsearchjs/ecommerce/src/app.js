@@ -1,5 +1,7 @@
 /* global instantsearch */
 
+import { hitTemplate } from "./helpers";
+
 const search = instantsearch({
   appId: "B1G2GM9NG0",
   apiKey: "aadef574be1f9252bb48d4ea09b5cfe5",
@@ -11,27 +13,19 @@ const search = instantsearch({
   }
 });
 
-search.addWidget(
+// Uncomment the following widget to add a search bar.
+
+/* search.addWidget(
   instantsearch.widgets.searchBox({
     container: "#searchbox",
     placeholder: "Search for products",
     autofocus: false
   })
-);
+); */
 
-search.addWidget(
-  instantsearch.widgets.hits({
-    container: "#hits",
-    templates: {
-      empty: "No results.",
-      item: function(hit) {
-        return hitTemplate(hit);
-      }
-    }
-  })
-);
+// Uncomment the following widget to add search stats.
 
-search.addWidget(
+/* search.addWidget(
   instantsearch.widgets.stats({
     container: "#stats",
     templates: {
@@ -42,15 +36,25 @@ search.addWidget(
       }
     }
   })
-);
+); */
 
-search.addWidget(
-  instantsearch.widgets.pagination({
-    container: "#pagination"
+// Uncomment the following widget to add hits list.
+
+/* search.addWidget(
+  instantsearch.widgets.hits({
+    container: "#hits",
+    templates: {
+      empty: "No results.",
+      item: function(hit) {
+        return hitTemplate(hit);
+      }
+    }
   })
-);
+); */
 
-search.addWidget(
+// Uncomment the following widget to add categories list.
+
+/* search.addWidget(
   instantsearch.widgets.refinementList({
     container: "#categories",
     attributeName: "categories",
@@ -59,9 +63,11 @@ search.addWidget(
       header: "Categories"
     }
   })
-);
+); */
 
-search.addWidget(
+// Uncomment the following widget to add brands list.
+
+/* search.addWidget(
   instantsearch.widgets.refinementList({
     container: "#brands",
     attributeName: "brand",
@@ -71,9 +77,11 @@ search.addWidget(
       header: "Brands"
     }
   })
-);
+); */
 
-search.addWidget(
+// Uncomment the following widget to add price range.
+
+/*  search.addWidget(
   instantsearch.widgets.rangeSlider({
     container: "#price",
     autoHideContainer: false,
@@ -82,25 +90,14 @@ search.addWidget(
       header: "Price"
     }
   })
-);
+); */
+
+// Uncomment the following widget to add pagination.
+
+/* search.addWidget(
+  instantsearch.widgets.pagination({
+    container: "#pagination"
+  })
+); */
 
 search.start();
-
-const hitTemplate = hit => {
-  return `
-    <div class="hit">
-      <div class="hit-image">
-        <img src="${hit.image}" />
-      </div>
-      <div class="hit-content">
-        <div>
-          <div class="hit-name">${hit._highlightResult.name.value}</div>
-          <div class="hit-description">${
-            hit._snippetResult.description.value
-          }</div>
-        </div>
-        <div class="hit-price">$${hit.price}</div>
-      </div>
-    </div>
-  `;
-};

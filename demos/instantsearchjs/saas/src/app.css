@@ -284,5 +284,5 @@ footer {
 }
 
 #type:empty:before {
-  content: "Uncomment the types widget to add types stats.";
+  content: "Uncomment the types widget to add types list.";
 }

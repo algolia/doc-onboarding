@@ -48,3 +48,49 @@ export function arrayToTable(data, options) {
   }
   return table;
 }
+
+export function hitTemplate(res) {
+  const tables = {
+    contact: {
+      title: "Contacts",
+      fields: [["Name", "Account", "Email"]]
+    },
+    opportunity: {
+      title: "Opportunities",
+      fields: [["Name", "Account", "Owner", "CloseDate", "StageName", "Amount"]]
+    },
+    account: {
+      title: "Accounts",
+      fields: [["Name", "Website", "Owner"]]
+    },
+    lead: {
+      title: "Leads",
+      fields: [["Name", "Email", "Owner"]]
+    }
+  };
+
+  let html = "";
+
+  res.hits.forEach(hit => {
+    tables[hit.type.toLowerCase()].fields.push(
+      tables[hit.type.toLowerCase()].fields[0].map(item => {
+        return hit._highlightResult[item]
+          ? hit._highlightResult[item].value
+          : hit[item];
+      })
+    );
+  });
+
+  Object.entries(tables).forEach(item => {
+    if (item[1].fields.length > 1) {
+      html +=
+        "<div class='hit'><h2>" +
+        item[1].title +
+        "</h2><div class='table-responsive'>" +
+        arrayToTable(item[1].fields)[0].outerHTML +
+        "</div></div>";
+    }
+  });
+
+  return html;
+}

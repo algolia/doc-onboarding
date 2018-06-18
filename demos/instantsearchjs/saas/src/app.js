@@ -1,5 +1,6 @@
 /* global instantsearch */
-import { arrayToTable } from "./helpers";
+
+import { hitTemplate } from "./helpers";
 
 const search = instantsearch({
   appId: "B1G2GM9NG0",
@@ -11,27 +12,19 @@ const search = instantsearch({
   }
 });
 
-search.addWidget(
+// Uncomment the following widget to add a search bar.
+
+/* search.addWidget(
   instantsearch.widgets.searchBox({
     container: "#searchbox",
     placeholder: "Search in your CRM",
     autofocus: false
   })
-);
+); */
 
-search.addWidget(
-  instantsearch.widgets.hits({
-    container: "#hits",
-    templates: {
-      empty: "No results.",
-      allItems(res) {
-        return hitTemplate(res);
-      }
-    }
-  })
-);
+// Uncomment the following widget to add search stats.
 
-search.addWidget(
+/* search.addWidget(
   instantsearch.widgets.stats({
     container: "#stats",
     templates: {
@@ -42,9 +35,25 @@ search.addWidget(
       }
     }
   })
-);
+); */
 
-search.addWidget(
+// Uncomment the following widget to add hits list.
+
+/* search.addWidget(
+  instantsearch.widgets.hits({
+    container: "#hits",
+    templates: {
+      empty: "No results.",
+      allItems(res) {
+        return hitTemplate(res);
+      }
+    }
+  })
+); */
+
+// Uncomment the following widget to add types list.
+
+/* search.addWidget(
   instantsearch.widgets.refinementList({
     container: "#type",
     attributeName: "type",
@@ -53,52 +62,6 @@ search.addWidget(
       header: "Categories"
     }
   })
-);
+); */
 
 search.start();
-
-const hitTemplate = res => {
-  const tables = {
-    contact: {
-      title: "Contacts",
-      fields: [["Name", "Account", "Email"]]
-    },
-    opportunity: {
-      title: "Opportunities",
-      fields: [["Name", "Account", "Owner", "CloseDate", "StageName", "Amount"]]
-    },
-    account: {
-      title: "Accounts",
-      fields: [["Name", "Website", "Owner"]]
-    },
-    lead: {
-      title: "Leads",
-      fields: [["Name", "Email", "Owner"]]
-    }
-  };
-
-  let html = "";
-
-  res.hits.forEach(hit => {
-    tables[hit.type.toLowerCase()].fields.push(
-      tables[hit.type.toLowerCase()].fields[0].map(item => {
-        return hit._highlightResult[item]
-          ? hit._highlightResult[item].value
-          : hit[item];
-      })
-    );
-  });
-
-  Object.entries(tables).forEach(item => {
-    if (item[1].fields.length > 1) {
-      html +=
-        "<div class='hit'><h2>" +
-        item[1].title +
-        "</h2><div class='table-responsive'>" +
-        arrayToTable(item[1].fields)[0].outerHTML +
-        "</div></div>";
-    }
-  });
-
-  return html;
-};
