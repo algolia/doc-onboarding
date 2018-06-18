@@ -19,34 +19,34 @@
           <!-- Uncomment the following widget to add search stats -->
           <!-- <div>
             <ais-stats>
-              <template slot-scope="{ totalResults, processingTime, query, resultStart, resultEnd }">
+              <div slot-scope="{ totalResults, processingTime, query, resultStart, resultEnd }">
                 ⚡️ <strong>{{ totalResults }}</strong> results found
                 <span v-if="query !== ''">for <strong>"{{ query }}"</strong></span>
                 in <strong>{{ processingTime }}ms</strong>
-              </template>
+              </div>
             </ais-stats>
           </div> -->
         </div>
         <div id="hits">
           <!-- Uncomment the following widget to add hits list -->
           <!-- <ais-results class="ais-hits">
-            <template slot-scope="{ result }">
+            <div slot-scope="{ result }">
               <hit :result="result"/>
-            </template>
+            </div>
           </ais-results>
           <ais-no-results>
-            <template slot-scope="props">
+            <div slot-scope="props">
               No results found for <strong>{{ props.query }}</strong>.
-            </template>
+            </div>
           </ais-no-results> -->
         </div>
         <div id="pagination">
           <!-- Uncomment the following widget to add pagination -->
           <!-- <ais-pagination>
-            <template slot="first">«</template>
-            <template slot="previous">‹</template>
-            <template slot="next">›</template>
-            <template slot="last">»</template>
+            <span slot="first">«</span>
+            <span slot="previous">‹</span>
+            <span slot="next">›</span>
+            <span slot="last">»</span>
           </ais-pagination> -->
         </div>
       </div>

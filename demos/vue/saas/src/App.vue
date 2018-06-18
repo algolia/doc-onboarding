@@ -17,11 +17,11 @@
           <!-- Uncomment the following widget to add search stats -->
           <!-- <div>
             <ais-stats>
-              <template slot-scope="{ totalResults, processingTime, query, resultStart, resultEnd }">
+              <div slot-scope="{ totalResults, processingTime, query, resultStart, resultEnd }">
                 ⚡️ <strong>{{ totalResults }}</strong> results found
                 <span v-if="query !== ''">for <strong>"{{ query }}"</strong></span>
                 in <strong>{{ processingTime }}ms</strong>
-              </template>
+              </div>
             </ais-stats>
           </div> -->
         </div>
@@ -29,9 +29,9 @@
           <!-- Uncomment the following widget to add hits list -->
           <!-- <table-results attribute-for-distinct="type"/>
           <ais-no-results>
-            <template slot-scope="props">
+            <div slot-scope="props">
               No results found for <strong>{{ props.query }}</strong>.
-            </template>
+            </div>
           </ais-no-results> -->
         </div>
       </div>
