@@ -459,7 +459,7 @@ footer {
 }
 
 #price:empty:before {
-  content: "Uncomment the price widget to add price list.";
+  content: "Uncomment the price widget to add price.";
 }
 
 #pagination:empty:before {

@@ -64,6 +64,7 @@ class App extends Component {
               </Panel> */}
             </div>
             <div id="price">
+              {/* Uncomment the following widget to add price */}
               {/* <Panel header="Price">
                 <RangeSlider attribute="price" />
               </Panel> */}
