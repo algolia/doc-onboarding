@@ -20,7 +20,6 @@ export class AppComponent {
   groupByType(items: Object[]) {
     const newItems = {};
     items.forEach((item: { type }) => {
-      console.log(item.type);
       if (!newItems[item.type]) {
         newItems[item.type] = [item];
       } else {
