@@ -52,6 +52,7 @@ em {
 .search-container {
   flex-grow: 1;
   display: flex;
+  flex-direction: row-reverse;
   width: 960px;
   min-height: 100%;
   margin: 0 auto;
@@ -317,5 +318,5 @@ footer {
 }
 
 #type:empty:before {
-  content: "Uncomment the types widget to add types stats.";
+  content: "Uncomment the types widget to add types list.";
 }

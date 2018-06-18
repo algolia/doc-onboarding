@@ -59,6 +59,7 @@ a {
 .search-container {
   flex-grow: 1;
   display: flex;
+  flex-direction: row-reverse;
   width: 960px;
   min-height: 100%;
   margin: 0 auto;
@@ -407,6 +408,8 @@ footer {
 #searchbox:empty:before,
 #hits:empty:before,
 #categories:empty:before,
+#brands:empty:before,
+#price:empty:before,
 #stats:empty:before,
 #pagination:empty:before {
   display: block;
@@ -417,6 +420,8 @@ footer {
 #searchbox:empty,
 #hits:empty,
 #categories:empty,
+#brands:empty,
+#price:empty,
 #stats:empty,
 #pagination:empty {
   padding: 0;
@@ -446,7 +451,15 @@ footer {
 }
 
 #categories:empty:before {
-  content: "Uncomment the categories widget to add categories stats.";
+  content: "Uncomment the categories widget to add categories list.";
+}
+
+#brands:empty:before {
+  content: "Uncomment the brands widget to add brands list.";
+}
+
+#price:empty:before {
+  content: "Uncomment the price widget to add price list.";
 }
 
 #pagination:empty:before {

@@ -25,25 +25,30 @@ class App extends Component {
             attributesToSnippet={["content:14"]}
             snippetEllipsisText={" [...]"}
           />
-          <div className="left-panel">
-            <div id="categories">
-              <Panel header="Categories">
-                <Facet attribute="categories" />
-              </Panel>
-            </div>
-          </div>
           <div className="right-panel">
             <div id="searchbox">
-              <SearchBox translations={{ placeholder: "Search articles" }} />
+              {/* Uncomment the following widget to add a search bar */}
+              {/* <SearchBox translations={{ placeholder: "Search articles" }} /> */}
             </div>
             <div id="stats">
-              <Stats />
+              {/* Uncomment the following widget to add search stats */}
+              {/* <Stats /> */}
             </div>
             <div id="hits">
-              <Content />
+              {/* Uncomment the following widget to add hits list */}
+              {/* <Content /> */}
             </div>
             <div id="pagination">
-              <Pagination />
+              {/* Uncomment the following widget to add pagination */}
+              {/* <Pagination /> */}
+            </div>
+          </div>
+          <div className="left-panel">
+            <div id="categories">
+              {/* Uncomment the following widget to add categories list */}
+              {/* <Panel header="Categories">
+                <Facet attribute="categories" />
+              </Panel> */}
             </div>
           </div>
         </main>

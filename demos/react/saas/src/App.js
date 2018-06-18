@@ -21,22 +21,26 @@ class App extends Component {
       >
         <Configure hitsPerPage={4} distinct={3} />
         <main className="search-container">
-          <div className="left-panel">
-            <div id="type">
-              <Panel header="Categories">
-                <Facet attribute="type" />
-              </Panel>
-            </div>
-          </div>
           <div className="right-panel">
             <div id="searchbox">
-              <SearchBox translations={{ placeholder: "Search in your CRM" }} />
+              {/* Uncomment the following widget to add a search bar */}
+              {/* <SearchBox translations={{ placeholder: "Search in your CRM" }} /> */}
             </div>
             <div id="stats">
-              <Stats />
+              {/* Uncomment the following widget to add search stats */}
+              {/* <Stats /> */}
             </div>
             <div id="hits">
-              <Content />
+              {/* Uncomment the following widget to add hits list */}
+              {/* <Content /> */}
+            </div>
+          </div>
+          <div className="left-panel">
+            <div id="type">
+              {/* Uncomment the following widget to add types list */}
+              {/* <Panel header="Categories">
+                <Facet attribute="type" />
+              </Panel> */}
             </div>
           </div>
         </main>

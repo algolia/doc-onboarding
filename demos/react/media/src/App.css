@@ -59,6 +59,7 @@ a {
 .search-container {
   flex-grow: 1;
   display: flex;
+  flex-direction: row-reverse;
   width: 960px;
   min-height: 100%;
   margin: 0 auto;
@@ -404,7 +405,7 @@ footer {
 }
 
 #categories:empty:before {
-  content: "Uncomment the categories widget to add categories stats.";
+  content: "Uncomment the categories widget to add categories list.";
 }
 
 #pagination:empty:before {
