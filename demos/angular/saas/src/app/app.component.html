@@ -1,27 +1,6 @@
 <ais-instantsearch [config]="config">
   <main class="search-container">
     <div class="right-panel">
-      <div id="searchbox">
-        <!-- Uncomment the following widget to add a search bar -->
-        <!-- <ais-search-box placeholder="Search in your CRM"></ais-search-box> -->
-      </div>
-      <div id="stats">
-        <!-- Uncomment the following widget to add search stats -->
-        <!-- <ais-stats>
-          <ng-template let-state="state ">
-            <div *ngIf="state.nbHits> 0"> ⚡️
-              <strong>{{state.nbHits}}</strong>
-              results found
-              <span *ngIf="state.query.trim().length > 0">
-                for
-                <strong>"{{state.query.trim()}}"</strong>
-              </span>
-              in
-              <strong>{{state.processingTimeMS}}ms</strong>
-            </div>
-          </ng-template>
-        </ais-stats> -->
-      </div>
       <div id="hits">
         <!-- Uncomment the following widget to add hits list -->
         <!-- <ais-hits [transformItems]="groupByType">
@@ -158,6 +137,27 @@
             </div>
           </ng-template>
         </ais-hits> -->
+      </div>
+      <div id="searchbox">
+        <!-- Uncomment the following widget to add a search bar -->
+        <!-- <ais-search-box placeholder="Search in your CRM"></ais-search-box> -->
+      </div>
+      <div id="stats">
+        <!-- Uncomment the following widget to add search stats -->
+        <!-- <ais-stats>
+          <ng-template let-state="state ">
+            <div *ngIf="state.nbHits> 0"> ⚡️
+              <strong>{{state.nbHits}}</strong>
+              results found
+              <span *ngIf="state.query.trim().length > 0">
+                for
+                <strong>"{{state.query.trim()}}"</strong>
+              </span>
+              in
+              <strong>{{state.processingTimeMS}}ms</strong>
+            </div>
+          </ng-template>
+        </ais-stats> -->
       </div>
     </div>
     <div class="left-panel">

@@ -177,6 +177,7 @@ em {
 
 #hits {
   flex-grow: 1;
+  order: 1;
 }
 
 .ais-hits {
@@ -266,6 +267,10 @@ em {
 
 .ais-refinement-list__item--active .ais-refinement-list__count {
   font-weight: normal;
+}
+
+#pagination {
+  order: 1;
 }
 
 .ais-pagination {

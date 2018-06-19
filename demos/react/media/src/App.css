@@ -173,6 +173,7 @@ a {
 
 #hits {
   flex-grow: 1;
+  order: 1;
 }
 
 .ais-Panel-header {
@@ -303,6 +304,10 @@ a {
 
 .ais-RefinementList-item--selected .ais-RefinementList-count {
   font-weight: normal;
+}
+
+#pagination {
+  order: 1;
 }
 
 .ais-Pagination-list {

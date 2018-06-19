@@ -9,6 +9,15 @@
   >
     <main class="search-container">
       <div class="right-panel">
+        <div id="hits">
+          <!-- Uncomment the following widget to add hits list -->
+          <!-- <table-results attribute-for-distinct="type"/>
+          <ais-no-results>
+            <div slot-scope="props">
+              No results found for <strong>{{ props.query }}</strong>.
+            </div>
+          </ais-no-results> -->
+        </div>
         <div id="searchbox">
           <!-- Uncomment the following widget to add a search bar  -->
           <!-- <ais-search-box placeholder="Search in your CRM" class="ais-search-box"/> -->
@@ -24,15 +33,6 @@
               </div>
             </ais-stats>
           </div> -->
-        </div>
-        <div id="hits">
-          <!-- Uncomment the following widget to add hits list -->
-          <!-- <table-results attribute-for-distinct="type"/>
-          <ais-no-results>
-            <div slot-scope="props">
-              No results found for <strong>{{ props.query }}</strong>.
-            </div>
-          </ais-no-results> -->
         </div>
       </div>
       <div class="left-panel">

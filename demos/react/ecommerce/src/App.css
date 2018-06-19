@@ -192,6 +192,7 @@ a {
 
 #hits {
   flex-grow: 1;
+  order: 1;
 }
 
 .ais-Hits {
@@ -344,6 +345,10 @@ a {
 
 .ais-RangeSlider--tooltip {
   background: transparent;
+}
+
+#pagination {
+  order: 1;
 }
 
 .ais-Pagination-list {

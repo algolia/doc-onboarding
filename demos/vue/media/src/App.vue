@@ -11,6 +11,19 @@
   >
     <main class="search-container">
       <div class="right-panel">
+        <div id="hits">
+          <!-- Uncomment the following widget to add hits list -->
+          <!-- <ais-results class="ais-hits">
+            <div slot-scope="{ result }">
+              <hit :result="result"/>
+            </div>
+          </ais-results>
+          <ais-no-results>
+            <div slot-scope="props">
+              No results found for <strong>{{ props.query }}</strong>.
+            </div>
+          </ais-no-results> -->
+        </div>
         <div id="searchbox">
           <!-- Uncomment the following widget to add a search bar  -->
           <!-- <ais-search-box placeholder="Search articles" class="ais-search-box"/> -->
@@ -26,19 +39,6 @@
               </div>
             </ais-stats>
           </div> -->
-        </div>
-        <div id="hits">
-          <!-- Uncomment the following widget to add hits list -->
-          <!-- <ais-results class="ais-hits">
-            <div slot-scope="{ result }">
-              <hit :result="result"/>
-            </div>
-          </ais-results>
-          <ais-no-results>
-            <div slot-scope="props">
-              No results found for <strong>{{ props.query }}</strong>.
-            </div>
-          </ais-no-results> -->
         </div>
         <div id="pagination">
           <!-- Uncomment the following widget to add pagination -->

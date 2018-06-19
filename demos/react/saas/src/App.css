@@ -177,6 +177,7 @@ em {
 
 #hits {
   flex-grow: 1;
+  order: 1;
 }
 
 .hit {

@@ -12,6 +12,20 @@ const search = instantsearch({
   }
 });
 
+// Uncomment the following widget to add hits list.
+
+/* search.addWidget(
+  instantsearch.widgets.hits({
+    container: "#hits",
+    templates: {
+      empty: "No results.",
+      allItems(res) {
+        return hitTemplate(res);
+      }
+    }
+  })
+); */
+
 // Uncomment the following widget to add a search bar.
 
 /* search.addWidget(
@@ -32,20 +46,6 @@ const search = instantsearch({
         return `⚡️ <strong>${hit.nbHits}</strong> results found ${
           hit.query != "" ? `for <strong>"${hit.query}"</strong>` : ``
         } in <strong>${hit.processingTimeMS}ms</strong>`;
-      }
-    }
-  })
-); */
-
-// Uncomment the following widget to add hits list.
-
-/* search.addWidget(
-  instantsearch.widgets.hits({
-    container: "#hits",
-    templates: {
-      empty: "No results.",
-      allItems(res) {
-        return hitTemplate(res);
       }
     }
   })

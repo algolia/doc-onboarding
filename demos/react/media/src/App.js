@@ -26,6 +26,10 @@ class App extends Component {
             snippetEllipsisText={" [...]"}
           />
           <div className="right-panel">
+            <div id="hits">
+              {/* Uncomment the following widget to add hits list */}
+              {/* <Content /> */}
+            </div>
             <div id="searchbox">
               {/* Uncomment the following widget to add a search bar */}
               {/* <SearchBox translations={{ placeholder: "Search articles" }} /> */}
@@ -33,10 +37,6 @@ class App extends Component {
             <div id="stats">
               {/* Uncomment the following widget to add search stats */}
               {/* <Stats /> */}
-            </div>
-            <div id="hits">
-              {/* Uncomment the following widget to add hits list */}
-              {/* <Content /> */}
             </div>
             <div id="pagination">
               {/* Uncomment the following widget to add pagination */}
