@@ -70,8 +70,11 @@ import Hit from './components/Hit'
 import RefinementList from './components/RefinementList'
 
 export default {
-  components: { Hit, RefinementList }
-}
+  components: {
+    Hit,
+    RefinementList,
+  },
+};
 </script>
 
 <style src="./assets/styles.css"></style>

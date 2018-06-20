@@ -55,8 +55,11 @@ import RefinementList from './components/RefinementList'
 import TableResults from './components/TableResults'
 
 export default {
-  components: { RefinementList, TableResults }
-}
+  components: {
+    RefinementList,
+    TableResults,
+  },
+};
 </script>
 
 <style src="./assets/styles.css"></style>

@@ -20,7 +20,11 @@
               <div class="hit">
                 <h2 class="hit-name">
                   <span class="hit-airport-name">
-                    <ais-highlight attribute-name="name" :result="result"></ais-highlight>
+                    <ais-highlight
+                      attribute-name="name"
+                      :result="result"
+                    >
+                    </ais-highlight>
                     <ais-highlight
                       attribute-name="city"
                       :result="result"
@@ -29,11 +33,19 @@
                     </ais-highlight>
                   </span>
                   <span class="hit-airport-code">
-                    (<ais-highlight attribute-name="airport_id" :result="result"></ais-highlight>)
+                    (<ais-highlight
+                      attribute-name="airport_id"
+                      :result="result"
+                    >
+                    </ais-highlight>)
                   </span>
                 </h2>
                 <p class="hit-location">
-                  <ais-highlight attribute-name="country" :result="result"></ais-highlight>
+                  <ais-highlight
+                    attribute-name="country"
+                    :result="result"
+                  >
+                  </ais-highlight>
                   <span class="hit-distance">({{distance(result)}} km away)</span>
                 </p>
               </div>

@@ -25,8 +25,8 @@ export default {
   },
   computed: {
     noResults() {
-      return !this.searchStore._results.length > 0
-    }
-  }
+      return !this.searchStore._results.length > 0;
+    },
+  },
 };
 </script>
