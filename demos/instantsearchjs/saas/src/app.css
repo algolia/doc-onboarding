@@ -136,6 +136,8 @@ em {
   padding: 8px 16px;
   font-weight: normal;
   border: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 #stats {

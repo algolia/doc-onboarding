@@ -153,6 +153,7 @@ em {
   font-family: inherit;
   line-height: inherit;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 .ais-input::-webkit-search-cancel-button {

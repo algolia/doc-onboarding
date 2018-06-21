@@ -131,6 +131,8 @@ a {
   font-weight: normal;
   border: none;
   font: inherit;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 #stats {

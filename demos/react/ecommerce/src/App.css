@@ -179,6 +179,8 @@ a {
   font-size: inherit;
   -webkit-appearance: none;
   appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 #stats {

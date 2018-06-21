@@ -159,6 +159,8 @@ em {
   font-size: 14px;
   font-family: inherit;
   line-height: inherit;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 #stats {

@@ -148,6 +148,8 @@ em {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 #stats {
