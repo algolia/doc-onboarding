@@ -159,6 +159,8 @@ a {
   font-family: inherit;
   line-height: inherit;
   font-size: inherit;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 #stats {
