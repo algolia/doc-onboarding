@@ -111,6 +111,8 @@ em {
   font-weight: normal;
   border: none;
   font: inherit;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .ais-SearchBox-input:focus {
