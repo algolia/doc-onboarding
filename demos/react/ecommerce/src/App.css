@@ -256,7 +256,8 @@ a {
   margin-bottom: 16px;
 }
 
-.ais-RefinementList-item {
+.ais-RefinementList-item,
+.ais-RefinementList-noResults {
   padding: 8px 16px;
 }
 
