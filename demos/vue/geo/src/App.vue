@@ -25,7 +25,7 @@
           <!-- <div>
             <ais-stats>
               <div slot-scope="{ totalResults, processingTime, query, resultStart, resultEnd }">
-                ⚡️ <strong>{{ totalResults }}</strong> results found
+                <span role="img" aria-label="emoji">⚡️</span> <strong>{{ totalResults }}</strong> results found
                 <span v-if="query !== ''">for <strong>"{{ query }}"</strong></span>
                 in <strong>{{ processingTime }}ms</strong>
               </div>

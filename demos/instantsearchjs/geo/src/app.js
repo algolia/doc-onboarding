@@ -96,7 +96,7 @@ search.addWidget(
     container: "#stats",
     templates: {
       body(hit) {
-        return `⚡️ <strong>${hit.nbHits}</strong> results found ${
+        return `<span role="img" aria-label="emoji">⚡️</span> <strong>${hit.nbHits}</strong> results found ${
           hit.query != "" ? `for <strong>"${hit.query}"</strong>` : ``
         } in <strong>${hit.processingTimeMS}ms</strong>`;
       }

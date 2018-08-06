@@ -4,7 +4,10 @@ export default connectStateResults(({ searchResults }) => {
   if (searchResults === null || searchResults.nbHits === 0) return <div />;
   return (
     <div className="ais-Stats">
-      ⚡️ <strong>{searchResults.nbHits}</strong> results found{" "}
+      <span role="img" aria-label="emoji">
+        ⚡️
+      </span>{" "}
+      <strong>{searchResults.nbHits}</strong> results found{" "}
       {searchResults.query !== "" && (
         <React.Fragment>
           for <strong>{`"${searchResults.query}"`}</strong>
