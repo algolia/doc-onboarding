@@ -1,5 +1,7 @@
 /* global instantsearch */
 
+import * as Helpers from "./helpers";
+
 const search = instantsearch({
   appId: "B1G2GM9NG0",
   apiKey: "aadef574be1f9252bb48d4ea09b5cfe5",
@@ -8,21 +10,55 @@ const search = instantsearch({
     hitsPerPage: 6,
     getRankingInfo: true,
     aroundLatLngViaIP: true,
-    highlightPreTag: "<em class='highlight'>",
-    highlightPostTag: "</em>",
     typoTolerance: "min"
   }
 });
 
+// Uncomment the following widget to add a map.
+
+/* let { map, markers } = Helpers.initGoogleMaps();
+
 search.addWidget(
+  instantsearch.connectors.connectHits(HitsRenderingOptions => {
+    const hits = HitsRenderingOptions.hits;
+
+    markers = Helpers.resetMarkers(markers);
+
+    for (let i = 0; i < hits.length; ++i) {
+      const hit = hits[i];
+      const marker = new google.maps.Marker({
+        position: { lat: hit._geoloc.lat, lng: hit._geoloc.lng },
+        map: map,
+        airport_id: hit.objectID,
+        title: `${hit.name} - ${hit.city} - ${hit.country}`
+      });
+
+      markers.push(marker);
+
+      marker.addListener("click", () => {
+        setTimeout(() => {
+          Helpers.buildInfoWindow(hit).close();
+        }, 3000);
+      });
+    }
+
+    map.fitBounds(Helpers.getMapBounds(markers));
+  })()
+); */
+
+// Uncomment the following widget to add a search bar.
+
+/* search.addWidget(
   instantsearch.widgets.searchBox({
     container: "#searchbox",
     placeholder: "Search airports by name, city, airport code",
     autofocus: false
   })
-);
+); */
 
-search.addWidget(
+// Uncomment the following widget to add hits list.
+
+/* search.addWidget(
   instantsearch.widgets.hits({
     container: "#hits",
     templates: {
@@ -51,43 +87,11 @@ search.addWidget(
       }
     }
   })
-);
+); */
 
-const map = new google.maps.Map(document.querySelector("#map"), {
-  streetViewControl: false,
-  mapTypeControl: false,
-  zoom: 4,
-  minZoom: 3,
-  maxZoom: 6,
-  styles: [{ stylers: [{ hue: "#3596D2" }] }]
-});
+// Uncomment the following widget to add search stats.
 
-let markers = [];
-
-search.addWidget(
-  instantsearch.connectors.connectHits(function(HitsRenderingOptions) {
-    const hits = HitsRenderingOptions.hits;
-
-    removeMarkersFromMap();
-    markers = [];
-
-    for (let i = 0; i < hits.length; ++i) {
-      const hit = hits[i];
-      const marker = new google.maps.Marker({
-        position: { lat: hit._geoloc.lat, lng: hit._geoloc.lng },
-        map: map,
-        airport_id: hit.objectID,
-        title: hit.name + " - " + hit.city + " - " + hit.country
-      });
-      markers.push(marker);
-      attachInfoWindow(marker, hit);
-    }
-
-    fitMapToMarkers();
-  })()
-);
-
-search.addWidget(
+/* search.addWidget(
   instantsearch.widgets.stats({
     container: "#stats",
     templates: {
@@ -98,35 +102,6 @@ search.addWidget(
       }
     }
   })
-);
+); */
 
 search.start();
-
-/* Helpers */
-
-function removeMarkersFromMap() {
-  for (var i = 0; i < markers.length; i++) {
-    markers[i].setMap(null);
-  }
-}
-
-function fitMapToMarkers() {
-  const mapBounds = new google.maps.LatLngBounds();
-  for (let i = 0; i < markers.length; i++) {
-    mapBounds.extend(markers[i].getPosition());
-  }
-  map.fitBounds(mapBounds);
-}
-
-function attachInfoWindow(marker, hit) {
-  const message =
-    hit.name === hit.city
-      ? `${hit.name} - ${hit.country}`
-      : `${hit.name} - ${hit.city} - ${hit.country}`;
-  const infowindow = new google.maps.InfoWindow({ content: message });
-  marker.addListener("click", function() {
-    setTimeout(function() {
-      infowindow.close();
-    }, 3000);
-  });
-}
