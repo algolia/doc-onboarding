@@ -1,13 +1,8 @@
 import React, { Component } from "react";
-import {
-  InstantSearch,
-  Hits,
-  Configure,
-  SearchBox
-} from "react-instantsearch-dom";
-import Hit from "./Hit";
+import { InstantSearch, Configure, SearchBox } from "react-instantsearch-dom";
 import Stats from "./Stats";
 import GoogleMaps from "./GoogleMaps";
+import Content from "./Content";
 import "./App.css";
 
 class App extends Component {
@@ -26,23 +21,27 @@ class App extends Component {
         />
         <main className="search-container">
           <div className="right-panel">
+            <div id="map">
+              {/* Uncomment the following widget to add a map */}
+              {/* <GoogleMaps /> */}
+            </div>
             <div id="searchbox">
-              <SearchBox
+              {/* Uncomment the following widget to add a search bar */}
+              {/* <SearchBox
                 translations={{
                   placeholder: "Search airports by name, city, airport code"
                 }}
-              />
+              /> */}
             </div>
             <div id="stats">
-              <Stats />
-            </div>
-            <div id="map">
-              <GoogleMaps />
+              {/* Uncomment the following widget to add search stats */}
+              {/* <Stats /> */}
             </div>
           </div>
           <div className="left-panel">
             <div id="hits">
-              <Hits hitComponent={Hit} />
+              {/* Uncomment the following widget to add hits list */}
+              {/* <Content /> */}
             </div>
           </div>
         </main>
