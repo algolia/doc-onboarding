@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
 * {
   box-sizing: border-box;
@@ -21,25 +21,38 @@ body {
   line-height: 24px;
   overflow-y: scroll;
   display: flex;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background: #f0f2f5;
   flex-direction: column;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.ais-InstantSearch__root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 a {
   color: #5468ff;
 }
 
-.ais-Highlight-highlighted {
+em {
   font-style: normal;
   font-weight: bold;
+  text-decoration: underline;
 }
 
-#root,
-.search-container,
-.ais-InstantSearch__root {
+.search-container {
   flex-grow: 1;
   display: flex;
+  flex-direction: row-reverse;
   width: 960px;
   min-height: 100%;
   margin: 0 auto;
@@ -227,17 +240,17 @@ footer {
 }
 
 #searchbox:empty:before {
-  content: 'Uncomment the searchBox widget to add a search bar.';
+  content: "Uncomment the searchBox widget to add a search bar.";
 }
 
 #hits:empty:before {
-  content: 'Uncomment the hits widget to add hits list.';
+  content: "Uncomment the hits widget to add hits list.";
 }
 
 #stats:empty:before {
-  content: 'Uncomment the stats widget to add search stats.';
+  content: "Uncomment the stats widget to add search stats.";
 }
 
 #map:empty:before {
-  content: 'Uncomment the map widget to add a map.';
+  content: "Uncomment the map widget to add a map.";
 }

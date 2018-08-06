@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   InstantSearch,
   Hits,
   Configure,
-  SearchBox,
-} from 'react-instantsearch-dom';
-import Hit from './Hit';
-import Stats from './Stats';
-import GoogleMaps from './GoogleMaps';
-import './App.css';
+  SearchBox
+} from "react-instantsearch-dom";
+import Hit from "./Hit";
+import Stats from "./Stats";
+import GoogleMaps from "./GoogleMaps";
+import "./App.css";
 
 class App extends Component {
   render() {
@@ -24,18 +24,12 @@ class App extends Component {
           aroundLatLngViaIP
           typoTolerance="min"
         />
-
         <main className="search-container">
-          <div className="left-panel">
-            <div id="hits">
-              <Hits hitComponent={Hit} />
-            </div>
-          </div>
           <div className="right-panel">
             <div id="searchbox">
               <SearchBox
                 translations={{
-                  placeholder: 'Search airports by name, city, airport code',
+                  placeholder: "Search airports by name, city, airport code"
                 }}
               />
             </div>
@@ -44,6 +38,11 @@ class App extends Component {
             </div>
             <div id="map">
               <GoogleMaps />
+            </div>
+          </div>
+          <div className="left-panel">
+            <div id="hits">
+              <Hits hitComponent={Hit} />
             </div>
           </div>
         </main>
