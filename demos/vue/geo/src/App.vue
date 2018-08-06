@@ -11,35 +11,18 @@
     }"
   >
     <main class="search-container">
-      <div class="left-panel">
-        <div id="hits">
-          <ais-results>
-            <template slot-scope="{ result }">
-              <div class="hit">
-                <h2 class="hit-name">
-                  <span class="hit-airport-name">
-                    <ais-highlight attribute-name="name" :result="result"/>
-                    <ais-highlight attribute-name="city" :result="result"/>
-                  </span>
-                  <span class="hit-airport-code">
-                    (<ais-highlight attribute-name="airport_id" :result="result"/>)
-                  </span>
-                </h2>
-                <p class="hit-location">
-                  <ais-highlight attribute-name="country" :result="result"/>
-                  <span class="hit-distance">({{distance(result)}} km away)</span>
-                </p>
-              </div>
-            </template>
-          </ais-results>
-        </div>
-      </div>
       <div class="right-panel">
+        <div id="map">
+          <!-- Uncomment the following widget to add a map -->
+          <!-- <geo-map/> -->
+        </div>
         <div id="searchbox">
-          <ais-search-box placeholder="Search airports by name, city, airport code" class="ais-search-box"/>
+          <!-- Uncomment the following widget to add a search bar -->
+          <!-- <ais-search-box placeholder="Search airports by name, city, airport code" class="ais-search-box"/> -->
         </div>
         <div id="stats">
-          <div>
+          <!-- Uncomment the following widget to add search stats -->
+          <!-- <div>
             <ais-stats>
               <div slot-scope="{ totalResults, processingTime, query, resultStart, resultEnd }">
                 ⚡️ <strong>{{ totalResults }}</strong> results found
@@ -47,10 +30,22 @@
                 in <strong>{{ processingTime }}ms</strong>
               </div>
             </ais-stats>
-          </div>
+          </div> -->
         </div>
-        <div id="map">
-          <geo-map/>
+      </div>
+      <div class="left-panel">
+        <div id="hits">
+          <!-- Uncomment the following widget to add hits list -->
+          <!-- <ais-results>
+            <template slot-scope="{ result }">
+              <hit :result="result"/>
+            </template>
+          </ais-results>
+          <ais-no-results>
+            <div slot-scope="props">
+              No results found for <strong>{{ props.query }}</strong>.
+            </div>
+          </ais-no-results> -->
         </div>
       </div>
     </main>
@@ -63,20 +58,11 @@
 </template>
 
 <script>
-import GeoMap from './GeoMap.vue'
+import Hit from './components/Hit'
+import GeoMap from './components/GeoMap'
 
 export default {
-  components: {
-    'geo-map': GeoMap
-  },
-  methods: {
-    distance(result) {
-      return parseInt(
-        result._rankingInfo.matchedGeoLocation.distance / 1000,
-        10
-      )
-    }
-  }
+  components: { Hit, GeoMap }
 }
 </script>
 
