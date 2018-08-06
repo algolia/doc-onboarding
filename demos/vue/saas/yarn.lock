@@ -4162,9 +4162,9 @@ vue-instantsearch@1.7.0:
     algoliasearch-helper "^2.26.0"
     escape-html "^1.0.3"
 
-vue-loader@14.2.2:
-  version "14.2.2"
-  resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-14.2.2.tgz#c8cf3c2e29b6fb2ee595248a2aa6005038a125b3"
+vue-loader@14.2.3:
+  version "14.2.3"
+  resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-14.2.3.tgz#3b39645c322d956e287d8d36eb77475f78c9b8e0"
   dependencies:
     consolidate "^0.14.0"
     hash-sum "^1.0.2"
