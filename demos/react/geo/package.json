@@ -7,12 +7,12 @@
     "build": "react-scripts build"
   },
   "dependencies": {
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-instantsearch-dom": "^5.2.0-beta.1",
+    "react": "16.4.0",
+    "react-dom": "16.4.0",
+    "react-instantsearch-dom": "5.2.0-beta.1",
     "react-scripts": "1.1.4"
   },
   "devDependencies": {
-    "prop-types": "^15.6.1"
+    "prop-types": "15.6.1"
   }
 }
