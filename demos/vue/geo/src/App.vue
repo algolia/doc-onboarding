@@ -37,9 +37,9 @@
         <div id="hits">
           <!-- Uncomment the following widget to add hits list -->
           <!-- <ais-results>
-            <template slot-scope="{ result }">
+            <div slot-scope="{ result }">
               <hit :result="result"/>
-            </template>
+            </div>
           </ais-results>
           <ais-no-results>
             <div slot-scope="props">
