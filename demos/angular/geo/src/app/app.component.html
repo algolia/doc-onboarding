@@ -1,38 +1,17 @@
 <ais-instantsearch [config]="config">
   <main class="search-container">
-    <div class="left-panel">
-      <ais-hits id="hits" class="ais-Hits">
-        <ng-template let-hits="hits" let-results="results">
-          <div *ngIf="hits.length === 0">
-            No results found matching
-            <strong>{{results.query}}</strong>.
-          </div>
-          <div class="ais-Hits-list">
-            <div class="ais-Hits-item" *ngFor="let hit of hits">
-              <div class="hit">
-                <h2 class="hit-name">
-                  <span ngPreserveWhitespaces class="hit-airport-name">
-                    <span [innerHTML]="hit._highlightResult.name.value"></span>
-                    <span [innerHTML]="hit._highlightResult.city.value"></span>
-                  </span>
-                  <span class="hit-airport-code" [innerHTML]="betweenParentheses(hit._highlightResult.airport_id.value)"></span>
-                </h2>
-                <p ngPreserveWhitespaces class="hit-location">
-                  <span [innerHTML]="hit._highlightResult.country.value"></span>
-                  <span class="hit-distance">
-                    <span [innerHTML]="betweenParentheses(roundNumber(hit._rankingInfo.matchedGeoLocation.distance / 1000) + ' km away')"></span>
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </ng-template>
-      </ais-hits>
-    </div>
     <div class="right-panel">
-      <ais-search-box placeholder="Search airports by name, city, airport code" id="searchbox"></ais-search-box>
+      <div id="map">
+        <!-- Uncomment the following widget to add a map -->
+        <!-- <ais-geo-hits></ais-geo-hits> -->
+      </div>
+      <div id="searchbox">
+        <!-- Uncomment the following widget to add a search bar -->
+        <!-- <ais-search-box placeholder="Search airports by name, city, airport code"></ais-search-box> -->
+      </div>
       <div id="stats">
-        <ais-stats>
+        <!-- Uncomment the following widget to add search stats -->
+        <!-- <ais-stats>
           <ng-template let-state="state">
             <div *ngIf="state.nbHits> 0">
               <span role="img" aria-label="emoji">⚡️</span>
@@ -46,9 +25,40 @@
               <strong>{{state.processingTimeMS}}ms</strong>
             </div>
           </ng-template>
-        </ais-stats>
+        </ais-stats> -->
       </div>
-      <ais-geo-hits></ais-geo-hits>
+    </div>
+    <div class="left-panel">
+      <div id="hits">
+        <!-- Uncomment the following widget to add hits list -->
+        <!-- <ais-hits class="ais-Hits">
+          <ng-template let-hits="hits" let-results="results">
+            <div *ngIf="hits.length === 0">
+              No results found matching
+              <strong>{{results.query}}</strong>.
+            </div>
+            <div class="ais-Hits-list">
+              <div class="ais-Hits-item" *ngFor="let hit of hits">
+                <div class="hit">
+                  <h2 class="hit-name">
+                    <span ngPreserveWhitespaces class="hit-airport-name">
+                      <span [innerHTML]="hit._highlightResult.name.value"></span>
+                      <span [innerHTML]="hit._highlightResult.city.value"></span>
+                    </span>
+                    <span class="hit-airport-code" [innerHTML]="betweenParentheses(hit._highlightResult.airport_id.value)"></span>
+                  </h2>
+                  <p ngPreserveWhitespaces class="hit-location">
+                    <span [innerHTML]="hit._highlightResult.country.value"></span>
+                    <span class="hit-distance">
+                      <span [innerHTML]="betweenParentheses(roundNumber(hit._rankingInfo.matchedGeoLocation.distance / 1000) + ' km away')"></span>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ais-hits> -->
+      </div>
     </div>
   </main>
 </ais-instantsearch>
