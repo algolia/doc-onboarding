@@ -93,11 +93,6 @@ em {
   flex-direction: column;
 }
 
-.ais-SearchBox {
-  flex-grow: 0;
-  margin-bottom: 8px;
-}
-
 #type {
   margin-right: 24px;
 }
@@ -112,6 +107,8 @@ em {
 }
 
 .ais-SearchBox {
+  flex-grow: 0;
+  margin-bottom: 8px;
   position: relative;
   height: auto;
   width: 100%;
