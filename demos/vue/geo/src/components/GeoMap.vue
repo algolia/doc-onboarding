@@ -12,31 +12,53 @@
     }"
   >
     <google-map-marker
-      v-for="marker in markers"
+      v-for="(marker, index) in markers"
       :key="marker.key"
       :position="marker.position"
-      :clickable="false"
+      :clickable="true"
       :draggable="false"
+      @click="openInfoWindow(marker, getMarkerId(marker, index))"
     />
+    <google-map-infowindow
+      v-for="(marker, index) in markers"
+      :key="getMarkerId(marker, index)"
+      :opened="openedInfoWindow === getMarkerId(marker, index)"
+      :position="{
+        lat: marker.position.lat + 0.5,
+        lng: marker.position.lng
+      }">
+      <div v-html="getInfoWindowTemplate(marker)"></div>
+    </google-map-infowindow>
   </google-map>
 </template>
 
 <script>
 import { Component } from 'vue-instantsearch'
-import { Map, Marker } from 'vue2-google-maps'
+import { Map, Marker, InfoWindow } from 'vue2-google-maps'
 
 export default {
   mixins: [Component],
   components: {
     'google-map-marker': Marker,
-    'google-map': Map
+    'google-map': Map,
+    'google-map-infowindow': InfoWindow
+  },
+  data() {
+    return {
+      openedInfoWindow: false
+    }
   },
   computed: {
     markers() {
-      return this.searchStore.results.map(({ objectID, _geoloc }) => ({
-        key: objectID,
-        position: _geoloc
-      }))
+      return this.searchStore.results.map(
+        ({ objectID, _geoloc, name, city, country }) => ({
+          key: objectID,
+          position: _geoloc,
+          name,
+          city,
+          country
+        })
+      )
     },
     getMapBounds() {
       const mapBounds = new google.maps.LatLngBounds()
@@ -47,6 +69,17 @@ export default {
     }
   },
   methods: {
+    getMarkerId(marker, index) {
+      return parseInt(marker.key + index)
+    },
+    getInfoWindowTemplate(item) {
+      return item.name === item.city
+        ? `${item.name} - ${item.country}`
+        : `${item.name} - ${item.city}, ${item.country}`
+    },
+    openInfoWindow(item, index) {
+      this.openedInfoWindow = index
+    },
     fitBounds(bounds) {
       this.$refs.gmap.$mapObject.fitBounds(bounds)
     }
