@@ -195,7 +195,7 @@ em {
   color: #999;
 }
 
-.hit:last-child {
+.ais-results > div:last-child .hit {
   margin-bottom: 0;
 }
 
