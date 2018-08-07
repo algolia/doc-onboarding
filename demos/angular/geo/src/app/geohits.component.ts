@@ -5,10 +5,10 @@ import {} from "@types/googlemaps";
 
 @Component({
   selector: "ais-geo-hits",
-  template: '<div #map id="map"></div>'
+  template: '<div #mapInner id="mapInner"></div>'
 })
 export class GeoHits extends BaseWidget {
-  @ViewChild("map") mapElement: any;
+  @ViewChild("mapInner") mapElement: any;
   map: google.maps.Map;
 
   state: { items: any };
