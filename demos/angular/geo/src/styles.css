@@ -26,13 +26,27 @@ body {
   flex-direction: column;
 }
 
+app-root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+ais-instantsearch {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 a {
   color: #5468ff;
 }
 
-.highlight {
+em {
   font-style: normal;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 .search-container {
@@ -74,7 +88,6 @@ a {
 
 #searchbox {
   flex-grow: 0;
-  margin-bottom: 8px;
 }
 
 #searchbox,
@@ -82,41 +95,50 @@ a {
   flex-grow: 0;
 }
 
+.ais-SearchBox-form {
+  position: relative;
+}
+
 .ais-SearchBox {
+  flex-grow: 0;
+  margin-bottom: 8px;
   position: relative;
   height: auto;
   width: 100%;
 }
 
-.ais-SearchBox-submitIcon,
-.ais-SearchBox-resetIcon {
+.ais-SearchBox-submit,
+.ais-SearchBox-reset {
   position: absolute;
   top: 0;
   left: inherit;
   margin: 14px 16px;
+  padding: 0;
+  background: none;
+  border: none;
   cursor: pointer;
 }
 
-.ais-SearchBox-submitIcon svg,
-.ais-SearchBox-resetIcon svg {
+.ais-SearchBox-submit svg,
+.ais-SearchBox-reset svg {
   width: 13px;
   height: 13px;
   display: block;
 }
 
-.ais-SearchBox-submitIcon svg {
+.ais-SearchBox-submit svg {
   fill: #5468ff;
 }
 
-.ais-SearchBox-resetIcon svg {
+.ais-SearchBox-reset svg {
   fill: #ed5a6a;
 }
 
-.ais-SearchBox-submitIcon {
+.ais-SearchBox-submit {
   right: 0;
 }
 
-.ais-SearchBox-resetIcon {
+.ais-SearchBox-reset {
   background: none;
   padding: 0;
   border: none;
@@ -127,7 +149,10 @@ a {
   width: 100%;
   padding: 8px 16px;
   font-weight: normal;
-  border: none;
+  border: 0;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
   -webkit-appearance: none;
   appearance: none;
 }
@@ -144,6 +169,7 @@ a {
 }
 
 #hits {
+  display: block;
   margin-right: 24px;
   flex-grow: 1;
 }
@@ -176,12 +202,15 @@ a {
   margin-bottom: 0;
 }
 
+ais-geo-hits {
+  height: 100%;
+  margin-bottom: 24px;
+}
+
 #map {
   height: 100%;
-  height: 500px;
   width: 100%;
   border-radius: 4px;
-  margin-bottom: 24px;
 }
 
 footer {
