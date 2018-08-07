@@ -11,14 +11,11 @@ export class GeoHits extends BaseWidget {
   @ViewChild("map") mapElement: any;
   map: google.maps.Map;
 
-  state: {
-    items: any;
-  };
+  state: { items: any };
   markers = [];
+  infoWindows = [];
 
-  updateState = state => {
-    this.updateMarkers(state.items);
-  };
+  updateState = state => this.updateMarkers(state.items);
 
   constructor(
     @Inject(forwardRef(() => NgAisInstantSearch))
@@ -51,8 +48,7 @@ export class GeoHits extends BaseWidget {
     items.forEach(hit => {
       const marker = new google.maps.Marker({
         position: { lat: hit._geoloc.lat, lng: hit._geoloc.lng },
-        map: this.map,
-        title: `${hit.name} - ${hit.city} - ${hit.country}`
+        map: this.map
       });
 
       this.markers.push(marker);
@@ -67,13 +63,14 @@ export class GeoHits extends BaseWidget {
       content:
         hit.name === hit.city
           ? `${hit.name} - ${hit.country}`
-          : `${hit.name} - ${hit.city} - ${hit.country}`
+          : `${hit.name} - ${hit.city}, ${hit.country}`
     });
 
-    marker.addListener("click", function() {
-      setTimeout(function() {
-        infowindow.close();
-      }, 3000);
+    this.infoWindows.push(infowindow);
+
+    marker.addListener("click", () => {
+      this.infoWindows.forEach(infowindow => infowindow.close());
+      infowindow.open(this.map, marker);
     });
   }
 
@@ -83,11 +80,7 @@ export class GeoHits extends BaseWidget {
 
   private fitMapToMarkers() {
     const mapBounds = new google.maps.LatLngBounds();
-
-    this.markers.forEach(marker => {
-      mapBounds.extend(marker.getPosition());
-    });
-
+    this.markers.forEach(marker => mapBounds.extend(marker.getPosition()));
     this.map.fitBounds(mapBounds);
   }
 }
