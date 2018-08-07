@@ -16,7 +16,7 @@ const search = instantsearch({
 
 // Uncomment the following widget to add a map.
 
-/* let { map, markers } = Helpers.initGoogleMaps();
+/* let { map, markers, infoWindows } = Helpers.initGoogleMaps();
 
 search.addWidget(
   instantsearch.connectors.connectHits(HitsRenderingOptions => {
@@ -30,15 +30,19 @@ search.addWidget(
         position: { lat: hit._geoloc.lat, lng: hit._geoloc.lng },
         map: map,
         airport_id: hit.objectID,
-        title: `${hit.name} - ${hit.city} - ${hit.country}`
+        title:
+          hit.name === hit.city
+            ? `${hit.name} - ${hit.country}`
+            : `${hit.name} - ${hit.city}, ${hit.country}`
       });
+      const infowindow = Helpers.buildInfoWindow(hit);
 
       markers.push(marker);
+      infoWindows.push(infowindow);
 
       marker.addListener("click", () => {
-        setTimeout(() => {
-          Helpers.buildInfoWindow(hit).close();
-        }, 3000);
+        infoWindows.forEach(infowindow => infowindow.close());
+        infowindow.open(map, marker);
       });
     }
 
@@ -96,7 +100,9 @@ search.addWidget(
     container: "#stats",
     templates: {
       body(hit) {
-        return `<span role="img" aria-label="emoji">⚡️</span> <strong>${hit.nbHits}</strong> results found ${
+        return `<span role="img" aria-label="emoji">⚡️</span> <strong>${
+          hit.nbHits
+        }</strong> results found ${
           hit.query != "" ? `for <strong>"${hit.query}"</strong>` : ``
         } in <strong>${hit.processingTimeMS}ms</strong>`;
       }

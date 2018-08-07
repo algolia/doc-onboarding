@@ -9,8 +9,9 @@ export function initGoogleMaps() {
   });
 
   let markers = [];
+  let infoWindows = [];
 
-  return { map, markers };
+  return { map, markers, infoWindows };
 }
 
 export function resetMarkers(markers) {
