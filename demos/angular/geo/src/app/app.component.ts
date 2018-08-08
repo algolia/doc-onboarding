@@ -15,8 +15,6 @@ export class AppComponent {
       hitsPerPage: 6,
       getRankingInfo: true,
       aroundLatLngViaIP: true,
-      highlightPreTag: "<em class='highlight'>",
-      highlightPostTag: "</em>",
       typoTolerance: "min"
     }
   };

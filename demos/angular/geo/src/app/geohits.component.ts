@@ -41,7 +41,7 @@ export class GeoHits extends BaseWidget {
       mapTypeControl: false,
       zoom: 4,
       minZoom: 3,
-      maxZoom: 6,
+      maxZoom: 7,
       styles: [{ stylers: [{ hue: "#3596D2" }] }]
     });
 
@@ -60,10 +60,9 @@ export class GeoHits extends BaseWidget {
 
   private attachInfoWindow(marker, hit) {
     const infowindow = new google.maps.InfoWindow({
-      content:
-        hit.name === hit.city
-          ? `${hit.name} - ${hit.country}`
-          : `${hit.name} - ${hit.city}, ${hit.country}`
+      content: `${hit.name} - ${hit.name === hit.city ? "" : `${hit.city}, `}${
+        hit.country
+      }<br>${hit.nb_airline_liaisons} liaisons`
     });
 
     this.infoWindows.push(infowindow);

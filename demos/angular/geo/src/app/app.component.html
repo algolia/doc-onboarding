@@ -49,8 +49,9 @@
                   </h2>
                   <p ngPreserveWhitespaces class="hit-location">
                     <span [innerHTML]="hit._highlightResult.country.value"></span>
+                    <br>
                     <span class="hit-distance">
-                      <span [innerHTML]="betweenParentheses(roundNumber(hit._rankingInfo.matchedGeoLocation.distance / 1000) + ' km away')"></span>
+                      <span *ngIf="hit._rankingInfo && hit._rankingInfo.matchedGeoLocation" [innerHTML]="roundNumber(hit._rankingInfo.matchedGeoLocation.distance / 1000) + ' km away, '"></span> {{hit.nb_airline_liaisons}} liaisons
                     </span>
                   </p>
                 </div>
