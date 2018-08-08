@@ -16,7 +16,7 @@ class GoogleMaps extends Component {
       mapTypeControl: false,
       zoom: 4,
       minZoom: 3,
-      maxZoom: 6,
+      maxZoom: 7,
       styles: [
         {
           stylers: [
@@ -47,10 +47,9 @@ class GoogleMaps extends Component {
       this.markers.push(marker);
 
       const infowindow = new window.google.maps.InfoWindow({
-        content:
-          hit.name === hit.city
-            ? `${hit.name} - ${hit.country}`
-            : `${hit.name} - ${hit.city}, ${hit.country}`
+        content: `${hit.name} - ${
+          hit.name === hit.city ? "" : `${hit.city}, `
+        }${hit.country}<br>${hit.nb_airline_liaisons} liaisons`
       });
 
       this.infoWindows.push(infowindow);
