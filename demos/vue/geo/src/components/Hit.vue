@@ -9,9 +9,14 @@
         (<ais-highlight attribute-name="airport_id" :result="result"/>)
       </span>
     </h2>
+    
     <p class="hit-location">
-      <ais-highlight attribute-name="country" :result="result"/>
-      <span class="hit-distance">({{ getFormattedDistance(result._rankingInfo.matchedGeoLocation.distance) }} km away)</span>
+      <ais-highlight attribute-name="country" :result="result"/><br>
+      <span class="hit-distance">
+        <span v-if="result._rankingInfo && result._rankingInfo.matchedGeoLocation">
+          {{ getFormattedDistance(result._rankingInfo.matchedGeoLocation.distance) }} km away,
+        </span> {{ result.nb_airline_liaisons }} liaisons
+      </span>
     </p>
   </div>
 </template>

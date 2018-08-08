@@ -7,7 +7,7 @@
       streetViewControl: false,
       mapTypeControl: false,
       minZoom: 3,
-      maxZoom: 6,
+      maxZoom: 7,
       styles: [{ stylers: [{ hue: '#3596D2' }] }]
     }"
   >
@@ -24,7 +24,7 @@
       :key="getMarkerId(marker, index)"
       :opened="openedInfoWindow === getMarkerId(marker, index)"
       :position="{
-        lat: marker.position.lat + 0.5,
+        lat: marker.position.lat + 0.3,
         lng: marker.position.lng
       }">
       <div v-html="getInfoWindowTemplate(marker)"></div>
@@ -51,12 +51,13 @@ export default {
   computed: {
     markers() {
       return this.searchStore.results.map(
-        ({ objectID, _geoloc, name, city, country }) => ({
+        ({ objectID, _geoloc, name, city, country, nb_airline_liaisons }) => ({
           key: objectID,
           position: _geoloc,
           name,
           city,
-          country
+          country,
+          nb_airline_liaisons
         })
       )
     },
@@ -73,9 +74,9 @@ export default {
       return parseInt(marker.key + index)
     },
     getInfoWindowTemplate(item) {
-      return item.name === item.city
-        ? `${item.name} - ${item.country}`
-        : `${item.name} - ${item.city}, ${item.country}`
+      return `${item.name} - ${
+        item.name === item.city ? '' : `${item.city}, `
+      }${item.country}<br>${item.nb_airline_liaisons} liaisons`
     },
     openInfoWindow(item, index) {
       this.openedInfoWindow = index
@@ -85,8 +86,10 @@ export default {
     }
   },
   updated() {
-    this.$refs.gmap.$mapPromise.then(map => {
-      this.fitBounds(this.getMapBounds)
+    this.$nextTick(() => {
+      this.$refs.gmap.$mapPromise.then(map => {
+        this.fitBounds(this.getMapBounds)
+      })
     })
   }
 }
