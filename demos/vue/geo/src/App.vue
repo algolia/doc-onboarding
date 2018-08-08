@@ -25,8 +25,10 @@
           <!-- Uncomment the following widget to add search stats -->
           <!-- <div>
             <ais-stats>
-              <div class="ais-stats-inner" slot-scope="{ totalResults, processingTime, query, resultStart, resultEnd }">
-                <search-ranking :result="{ totalResults, processingTime, query, resultStart, resultEnd }"/>
+              <div slot-scope="{ totalResults, processingTime, query, resultStart, resultEnd }">
+                <span role="img" aria-label="emoji">⚡️</span> <strong>{{ totalResults }}</strong> results found
+                <span v-if="query !== ''">for <strong>"{{ query }}"</strong></span>
+                in <strong>{{ processingTime }}ms</strong>
               </div>
             </ais-stats>
           </div> -->
@@ -59,10 +61,9 @@
 <script>
 import Hit from './components/Hit'
 import GeoMap from './components/GeoMap'
-import Ranking from './components/Ranking'
 
 export default {
-  components: { Hit, GeoMap, 'search-ranking': Ranking }
+  components: { Hit, GeoMap }
 }
 </script>
 

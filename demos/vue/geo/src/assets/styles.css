@@ -166,15 +166,6 @@ em {
   opacity: 1;
 }
 
-.ais-stats-inner {
-  display: flex;
-  justify-content: space-between;
-}
-
-.cityOrCountry {
-  text-transform: capitalize;
-}
-
 #hits {
   margin-right: 24px;
   flex-grow: 1;
