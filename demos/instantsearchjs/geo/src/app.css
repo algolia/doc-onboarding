@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 * {
   box-sizing: border-box;
@@ -21,7 +21,7 @@ body {
   line-height: 24px;
   overflow-y: scroll;
   display: flex;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background: #f0f2f5;
   flex-direction: column;
 }
@@ -182,6 +182,12 @@ em {
   width: 100%;
   border-radius: 4px;
   margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.ais-geo-search,
+.ais-geo-search--map {
+  height: 100%;
 }
 
 footer {
@@ -220,17 +226,17 @@ footer {
 }
 
 #searchbox:empty:before {
-  content: "Uncomment the searchBox widget to add a search bar.";
+  content: 'Uncomment the searchBox widget to add a search bar.';
 }
 
 #hits:empty:before {
-  content: "Uncomment the hits widget to add hits list.";
+  content: 'Uncomment the hits widget to add hits list.';
 }
 
 #stats:empty:before {
-  content: "Uncomment the stats widget to add search stats.";
+  content: 'Uncomment the stats widget to add search stats.';
 }
 
 #map:empty:before {
-  content: "Uncomment the map widget to add a map.";
+  content: 'Uncomment the map widget to add a map.';
 }
