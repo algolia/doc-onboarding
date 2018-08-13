@@ -1,6 +1,6 @@
 /* global instantsearch */
 
-const search = instantsearch({
+/* const search = instantsearch({
   appId: 'B1G2GM9NG0',
   apiKey: 'aadef574be1f9252bb48d4ea09b5cfe5',
   indexName: 'demo_geo',
@@ -10,11 +10,11 @@ const search = instantsearch({
     aroundLatLngViaIP: true,
     typoTolerance: 'min'
   }
-})
+}) */
 
 // Uncomment the following widget to add a map.
 
-const InfoWindow = new window.google.maps.InfoWindow()
+/* const InfoWindow = new window.google.maps.InfoWindow()
 
 search.addWidget(
   instantsearch.widgets.geoSearch({
@@ -46,21 +46,21 @@ search.addWidget(
       }
     }
   })
-)
+) */
 
 // Uncomment the following widget to add a search bar.
 
-search.addWidget(
+/* search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#searchbox',
     placeholder: 'Search airports by name, city, airport code',
     autofocus: false
   })
-)
+) */
 
 // Uncomment the following widget to add hits list.
 
-search.addWidget(
+/* search.addWidget(
   instantsearch.widgets.hits({
     container: '#hits',
     templates: {
@@ -99,11 +99,11 @@ search.addWidget(
       }
     }
   })
-)
+) */
 
 // Uncomment the following widget to add search stats.
 
-search.addWidget(
+/* search.addWidget(
   instantsearch.widgets.stats({
     container: '#stats',
     templates: {
@@ -116,6 +116,6 @@ search.addWidget(
       }
     }
   })
-)
+) */
 
 search.start()
