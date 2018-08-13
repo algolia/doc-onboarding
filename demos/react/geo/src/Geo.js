@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
-import { GeoSearch, Marker } from 'react-instantsearch-dom-maps';
+import React, { Component } from 'react'
+import { GeoSearch, Marker } from 'react-instantsearch-dom-maps'
 
 class Geo extends Component {
-  InfoWindow = new this.props.google.maps.InfoWindow();
+  InfoWindow = new this.props.google.maps.InfoWindow()
 
   onClickMarker = ({ hit, marker }) => {
-    if (this.InfoWindow.getMap()) {
-      this.InfoWindow.close();
-    }
-
-    this.InfoWindow.setContent(hit.name);
-
-    this.InfoWindow.open(marker.getMap(), marker);
-  };
+    if (this.InfoWindow.getMap()) this.InfoWindow.close()
+    this.InfoWindow.setContent(
+      `${hit.name} - ${hit.name === hit.city ? '' : `${hit.city}, `}${
+        hit.country
+      }<br>${hit.nb_airline_liaisons} liaisons`
+    )
+    this.InfoWindow.open(marker.getMap(), marker)
+  }
 
   render() {
-    const { google } = this.props;
+    const { google } = this.props
 
     return (
       <GeoSearch
@@ -30,10 +30,10 @@ class Geo extends Component {
           {
             stylers: [
               {
-                hue: '#3596D2',
-              },
-            ],
-          },
+                hue: '#3596D2'
+              }
+            ]
+          }
         ]}
       >
         {({ hits }) => (
@@ -45,16 +45,16 @@ class Geo extends Component {
                 onClick={({ marker }) => {
                   this.onClickMarker({
                     hit,
-                    marker,
-                  });
+                    marker
+                  })
                 }}
               />
             ))}
           </div>
         )}
       </GeoSearch>
-    );
+    )
   }
 }
 
-export default Geo;
+export default Geo
