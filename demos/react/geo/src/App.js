@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { InstantSearch, Configure, SearchBox } from 'react-instantsearch-dom';
-import { GoogleMapsLoader } from 'react-instantsearch-dom-maps';
-import Stats from './Stats';
-import Content from './Content';
-import Geo from './Geo';
-import './App.css';
+import React, { Component } from 'react'
+import { InstantSearch, Configure, SearchBox } from 'react-instantsearch-dom'
+import { GoogleMapsLoader } from 'react-instantsearch-dom-maps'
+import Stats from './Stats'
+import Content from './Content'
+import Geo from './Geo'
+import './App.css'
 
 class App extends Component {
   render() {
@@ -35,7 +35,7 @@ class App extends Component {
               {/* Uncomment the following widget to add a search bar */}
               <SearchBox
                 translations={{
-                  placeholder: 'Search airports by name, city, airport code',
+                  placeholder: 'Search airports by name, city, airport code'
                 }}
               />
             </div>
@@ -52,8 +52,8 @@ class App extends Component {
           </div>
         </main>
       </InstantSearch>
-    );
+    )
   }
 }
 
-export default App;
+export default App
