@@ -203,6 +203,7 @@ em {
   border-radius: 4px;
   margin-bottom: 24px;
   order: 1;
+  overflow: hidden;
 }
 
 .ais-Maps {
