@@ -24,30 +24,30 @@ class App extends Component {
           <div className="right-panel">
             <div id="map">
               {/* Uncomment the following widget to add a map */}
-              <div style={{ height: '100%' }}>
+              {/* <div style={{ height: '100%' }}>
                 <GoogleMapsLoader apiKey="AIzaSyBnDR4e5_qobPG6Vn_zjhc1vyOIooChZt8">
                   {google => <Geo google={google} />}
                 </GoogleMapsLoader>
-              </div>
+              </div> */}
               {/* <GoogleMaps /> */}
             </div>
             <div id="searchbox">
               {/* Uncomment the following widget to add a search bar */}
-              <SearchBox
+              {/* <SearchBox
                 translations={{
                   placeholder: 'Search airports by name, city, airport code'
                 }}
-              />
+              /> */}
             </div>
             <div id="stats">
               {/* Uncomment the following widget to add search stats */}
-              <Stats />
+              {/* <Stats /> */}
             </div>
           </div>
           <div className="left-panel">
             <div id="hits">
               {/* Uncomment the following widget to add hits list */}
-              <Content />
+              {/* <Content /> */}
             </div>
           </div>
         </main>
