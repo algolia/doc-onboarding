@@ -29,7 +29,6 @@ class App extends Component {
                   {google => <Geo google={google} />}
                 </GoogleMapsLoader>
               </div> */}
-              {/* <GoogleMaps /> */}
             </div>
             <div id="searchbox">
               {/* Uncomment the following widget to add a search bar */}
