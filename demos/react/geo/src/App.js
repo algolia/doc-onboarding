@@ -25,7 +25,7 @@ class App extends Component {
             <div id="map">
               {/* Uncomment the following widget to add a map */}
               {/* <div style={{ height: '100%' }}>
-                <GoogleMapsLoader apiKey="AIzaSyBnDR4e5_qobPG6Vn_zjhc1vyOIooChZt8">
+                <GoogleMapsLoader apiKey="AIzaSyBawL8VbstJDdU5397SUX7pEt9DslAwWgQ">
                   {google => <Geo google={google} />}
                 </GoogleMapsLoader>
               </div> */}
