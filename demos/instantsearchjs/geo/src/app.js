@@ -1,6 +1,6 @@
 /* global instantsearch */
 
-/* const search = instantsearch({
+const search = instantsearch({
   appId: 'B1G2GM9NG0',
   apiKey: 'aadef574be1f9252bb48d4ea09b5cfe5',
   indexName: 'demo_geo',
@@ -10,7 +10,7 @@
     aroundLatLngViaIP: true,
     typoTolerance: 'min'
   }
-}) */
+})
 
 // Uncomment the following widget to add a map.
 
