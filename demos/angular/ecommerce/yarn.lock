@@ -555,9 +555,9 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-angular-instantsearch@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/angular-instantsearch/-/angular-instantsearch-2.0.2.tgz#64d7dba7c2d899ab58b3160eb50a34960063d977"
+angular-instantsearch@2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/angular-instantsearch/-/angular-instantsearch-2.0.4.tgz#d34b05343e8f173da08af8b283ca52909a734ca5"
   dependencies:
     algoliasearch "^3.29.0"
     algoliasearch-helper "^2.26.1"
