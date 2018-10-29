@@ -14,6 +14,6 @@
     "react-scripts": "1.1.4"
   },
   "devDependencies": {
-    "prop-types": "15.6.1"
+    "prop-types": "15.6.2"
   }
 }
