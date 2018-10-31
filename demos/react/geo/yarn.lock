@@ -5639,7 +5639,7 @@ react-instantsearch-core@^5.3.1:
     lodash "^4.17.4"
     prop-types "^15.5.10"
 
-react-instantsearch-dom-maps@^5.2.2:
+react-instantsearch-dom-maps@5.2.2:
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/react-instantsearch-dom-maps/-/react-instantsearch-dom-maps-5.2.2.tgz#c241f3d4bef3d8f018d71a85f6013f167953b98f"
   dependencies:
