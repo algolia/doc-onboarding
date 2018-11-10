@@ -4174,9 +4174,9 @@ vue-template-es2015-compiler@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
 
-vue2-google-maps@0.9.7:
-  version "0.9.7"
-  resolved "https://registry.yarnpkg.com/vue2-google-maps/-/vue2-google-maps-0.9.7.tgz#a9393c1d4f0c6f3e45db2d1b8d54fc021e187ce3"
+vue2-google-maps@0.10.2:
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/vue2-google-maps/-/vue2-google-maps-0.10.2.tgz#2a6d2942e8a37103fa0707f8b3cb052a7a372bab"
   dependencies:
     babel-runtime "^5.8.0"
     marker-clusterer-plus "^2.1.4"
