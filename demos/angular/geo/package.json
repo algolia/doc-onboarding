@@ -24,7 +24,7 @@
     "angular-instantsearch": "2.1.0",
     "core-js": "2.6.2",
     "rxjs": "6.2.0",
-    "zone.js": "0.8.26"
+    "zone.js": "0.8.28"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.12.2",
