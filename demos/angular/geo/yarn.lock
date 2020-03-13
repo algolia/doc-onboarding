@@ -306,9 +306,9 @@
     semver "5.6.0"
     semver-intersect "1.4.0"
 
-"@types/googlemaps@3.30.9":
-  version "3.30.9"
-  resolved "https://registry.yarnpkg.com/@types/googlemaps/-/googlemaps-3.30.9.tgz#893eb307bfcbff95ef6c9ce70f72e6f9a2068cc4"
+"@types/googlemaps@3.39.2":
+  version "3.39.2"
+  resolved "https://registry.yarnpkg.com/@types/googlemaps/-/googlemaps-3.39.2.tgz#a85721970305f7b6e50b1369aed53be35485d11a"
 
 "@types/jasmine@*":
   version "2.8.8"
