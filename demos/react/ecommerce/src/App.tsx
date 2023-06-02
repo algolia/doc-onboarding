@@ -29,7 +29,7 @@ export function App() {
         <Configure
           hitsPerPage={5}
           attributesToSnippet={['description:24']}
-          snippetEllipsisText=" [...]"
+          snippetEllipsisText="[…]"
         />
         <div className="right-panel">
           <div id="hits">
