@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
-
 * {
   box-sizing: border-box;
 }
@@ -21,9 +19,20 @@ body {
   line-height: 24px;
   overflow-y: scroll;
   display: flex;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background: #f0f2f5;
   flex-direction: column;
+}
+
+footer {
+  flex-grow: 0;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+}
+
+a {
+  color: #5468ff;
 }
 
 #root {
@@ -33,27 +42,12 @@ body {
   flex-grow: 1;
 }
 
-.ais-InstantSearch__root {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-a {
-  color: #5468ff;
-}
-
 .ais-Highlight-highlighted,
 .ais-Snippet-highlighted {
   font-style: normal;
   font-weight: bold;
   text-decoration: underline;
-}
-
-.ais-InstantSearch__root {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+  background-color: transparent;
 }
 
 .search-container {
@@ -85,10 +79,6 @@ a {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
-.ais-SearchBox-input:focus {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-}
-
 .left-panel {
   flex: 0 0 240px;
 }
@@ -99,6 +89,8 @@ a {
   display: flex;
   flex-direction: column;
 }
+
+/* Search box */
 
 #searchbox {
   flex-grow: 0;
@@ -122,6 +114,9 @@ a {
   top: 0;
   left: inherit;
   margin: 14px 16px;
+  padding: 0;
+  background: none;
+  border: none;
   cursor: pointer;
 }
 
@@ -163,6 +158,12 @@ a {
   appearance: none;
 }
 
+.ais-SearchBox-input:focus {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Stats */
+
 #stats {
   flex-grow: 0;
   margin-bottom: 16px;
@@ -173,18 +174,11 @@ a {
   color: #697782;
 }
 
+/* Hits */
+
 #hits {
   flex-grow: 1;
   order: 1;
-}
-
-.ais-Panel-header {
-  font-weight: bolder;
-  margin: 0;
-  padding: 0 16px 8px;
-  font-size: inherit;
-  text-transform: uppercase;
-  border-bottom: 1px solid #eee;
 }
 
 .ais-Hits-item {
@@ -269,17 +263,34 @@ a {
   padding: 16px;
 }
 
-.ais-RefinementList-item {
+/* Panel */
+
+.ais-Panel-header {
+  font-weight: bolder;
+  margin: 0;
+  padding: 0 16px 8px;
+  font-size: inherit;
+  text-transform: uppercase;
+  border-bottom: 1px solid #eee;
+}
+
+/* Refinement list */
+
+.ais-RefinementList-item,
+.ais-RefinementList-noResults,
+.ais-RefinementList--noRefinement {
   padding: 8px 16px;
 }
 
-.ais-RefinementList-label {
-  cursor: pointer;
+.ais-RefinementList--noRefinement:after {
+  content: 'No results';
 }
 
-.ais-RefinementList-labelText,
-.ais-RefinementList-labelText:hover {
-  color: black;
+.ais-RefinementList--noRefinement .ais-RefinementList-searchBox {
+  display: none;
+}
+
+.ais-RefinementList-label {
   cursor: pointer;
 }
 
@@ -300,13 +311,11 @@ a {
   margin-left: 0.6em;
 }
 
-.ais-RefinementList-item--selected .ais-RefinementList-label {
-  font-weight: 700;
+.ais-RefinementList-item--selected {
+  font-weight: bold;
 }
 
-.ais-RefinementList-item--selected .ais-RefinementList-count {
-  font-weight: normal;
-}
+/* Pagination */
 
 #pagination {
   order: 1;
@@ -356,16 +365,10 @@ a {
 
 .ais-Pagination-item .ais-Pagination-link,
 .ais-Pagination-item--disabled .ais-Pagination-link {
+  padding: 6px 16px;
   text-decoration: none;
   color: #fff;
-  line-height: 32px;
-}
-
-footer {
-  flex-grow: 0;
-  text-align: center;
-  font-size: 12px;
-  color: #999;
+  line-height: 20px;
 }
 
 /* Placeholders */
@@ -400,21 +403,21 @@ footer {
 }
 
 #searchbox:empty:before {
-  content: "Uncomment the searchBox widget to add a search bar.";
+  content: 'Uncomment the search box widget to add a search bar.';
 }
 
 #hits:empty:before {
-  content: "Uncomment the hits widget to add hits list.";
+  content: 'Uncomment the hits widget to add hits list.';
 }
 
 #stats:empty:before {
-  content: "Uncomment the stats widget to add search stats.";
+  content: 'Uncomment the stats widget to add search stats.';
 }
 
 #categories:empty:before {
-  content: "Uncomment the categories widget to add categories list.";
+  content: 'Uncomment the categories widget to add categories list.';
 }
 
 #pagination:empty:before {
-  content: "Uncomment the pagination widget to add pagination.";
+  content: 'Uncomment the pagination widget to add pagination.';
 }
