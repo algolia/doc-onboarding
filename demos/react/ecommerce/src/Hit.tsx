@@ -1,10 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Highlight, Snippet } from "react-instantsearch-dom";
+import React from 'react'
+import { Highlight, Snippet } from 'react-instantsearch-hooks-web'
+import type { Hit } from 'instantsearch.js'
 
-export default Hit;
+type HitProps = {
+  hit: Hit
+}
 
-function Hit({ hit }) {
+export function Hit({ hit }: HitProps) {
   return (
     <div className="hit">
       <div className="hit-image">
@@ -13,7 +15,7 @@ function Hit({ hit }) {
       <div className="hit-content">
         <div>
           <div className="hit-name">
-            <Highlight attribute="name" hit={hit} tagName="em" />
+            <Highlight attribute="name" hit={hit} highlightedTagName="em" />
           </div>
           <div className="hit-description">
             <Snippet attribute="description" hit={hit} />
@@ -22,9 +24,5 @@ function Hit({ hit }) {
         <div className="hit-price">${hit.price}</div>
       </div>
     </div>
-  );
+  )
 }
-
-Hit.propTypes = {
-  hit: PropTypes.object.isRequired
-};
