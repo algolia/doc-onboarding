@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
-
 * {
   box-sizing: border-box;
 }
@@ -21,9 +19,20 @@ body {
   line-height: 24px;
   overflow-y: scroll;
   display: flex;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background: #f0f2f5;
   flex-direction: column;
+}
+
+footer {
+  flex-grow: 0;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+}
+
+a {
+  color: #5468ff;
 }
 
 #root {
@@ -33,20 +42,12 @@ body {
   flex-grow: 1;
 }
 
-.ais-InstantSearch__root {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-a {
-  color: #5468ff;
-}
-
-em {
+.ais-Highlight-highlighted,
+.ais-Snippet-highlighted {
   font-style: normal;
   font-weight: bold;
   text-decoration: underline;
+  background-color: transparent;
 }
 
 .search-container {
@@ -62,17 +63,6 @@ em {
   .search-container {
     width: 100%;
   }
-}
-
-.left-panel {
-  flex: 0 0 240px;
-}
-
-.right-panel {
-  width: calc(100% - 256px);
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
 }
 
 #type {
@@ -99,28 +89,33 @@ em {
   flex-grow: 0;
 }
 
-.ais-SearchBox-form {
+.left-panel {
+  flex: 0 0 240px;
+}
+
+.right-panel {
+  width: calc(100% - 256px);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Search box */
+
+#searchbox {
+  flex-grow: 0;
+  margin-bottom: 8px;
+}
+
+#searchbox,
+#stats {
+  flex-grow: 0;
+}
+
+.ais-SearchBox {
   position: relative;
   height: auto;
   width: 100%;
-}
-
-.ais-SearchBox-input {
-  width: 100%;
-  padding: 8px 16px;
-  font-weight: normal;
-  border: none;
-  font: inherit;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-.ais-SearchBox-input:focus {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-}
-
-.ais-SearchBox-input::-webkit-search-cancel-button {
-  -webkit-appearance: none;
 }
 
 .ais-SearchBox-submit,
@@ -129,19 +124,29 @@ em {
   top: 0;
   left: inherit;
   margin: 14px 16px;
+  padding: 0;
+  background: none;
+  border: none;
   cursor: pointer;
 }
 
+.ais-SearchBox-submit svg,
+.ais-SearchBox-reset svg {
+  width: 13px;
+  height: 13px;
+  display: block;
+}
+
+.ais-SearchBox-submit svg {
+  fill: #5468ff;
+}
+
+.ais-SearchBox-reset svg {
+  fill: #ed5a6a;
+}
+
 .ais-SearchBox-submit {
-  position: absolute;
-  top: 0;
   right: 0;
-  left: inherit;
-  margin: 14px 16px;
-  padding: 0;
-  cursor: pointer;
-  background: none;
-  border: none;
 }
 
 .ais-SearchBox-reset {
@@ -151,20 +156,23 @@ em {
   right: 30px;
 }
 
-.ais-SearchBox-submitIcon,
-.ais-SearchBox-resetIcon {
-  width: 13px;
-  height: 13px;
-  display: block;
+.ais-SearchBox-input {
+  width: 100%;
+  padding: 8px 16px;
+  font-weight: normal;
+  border: none;
+  font-family: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-.ais-SearchBox-submitIcon {
-  fill: #5468ff;
+.ais-SearchBox-input:focus {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
-.ais-SearchBox-resetIcon {
-  fill: #ed5a6a;
-}
+/* Stats */
 
 #stats {
   flex-grow: 0;
@@ -174,8 +182,9 @@ em {
 .ais-Stats {
   font-size: 12px;
   color: #697782;
-  opacity: 1;
 }
+
+/* Hits */
 
 #hits {
   flex-grow: 1;
@@ -229,6 +238,8 @@ em {
   background: #f5f5fa;
 }
 
+/* Panel */
+
 .ais-Panel-header {
   font-weight: bolder;
   margin: 0;
@@ -238,25 +249,24 @@ em {
   border-bottom: 1px solid #eee;
 }
 
-.ais-RefinementList-item {
+/* Refinement list */
+
+.ais-RefinementList-item,
+.ais-RefinementList-noResults,
+.ais-RefinementList--noRefinement {
   padding: 8px 16px;
 }
 
+.ais-RefinementList--noRefinement:after {
+  content: 'No results';
+}
+
+.ais-RefinementList--noRefinement .ais-RefinementList-searchBox {
+  display: none;
+}
+
 .ais-RefinementList-label {
-  display: block;
-  color: black;
-}
-
-.ais-RefinementList-label:hover {
   cursor: pointer;
-}
-
-.ais-RefinementList-checkbox {
-  margin: 0;
-}
-
-.ais-RefinementList-labelText {
-  margin-left: 0.6em;
 }
 
 .ais-RefinementList-count {
@@ -268,16 +278,16 @@ em {
   float: right;
 }
 
-.ais-RefinementList-item--selected .ais-RefinementList-label,
-.ais-RefinementList-item--selected .ais-RefinementList-count {
-  font-weight: 700;
+.ais-RefinementList-checkbox {
+  margin: 0;
 }
 
-footer {
-  flex-grow: 0;
-  text-align: center;
-  font-size: 12px;
-  color: #999;
+.ais-RefinementList-labelText {
+  margin-left: 0.6em;
+}
+
+.ais-RefinementList-item--selected {
+  font-weight: bold;
 }
 
 /* Placeholders */
@@ -309,7 +319,7 @@ footer {
 }
 
 #searchbox:empty:before {
-  content: "Uncomment the searchBox widget to add a search bar.";
+  content: "Uncomment the search box widget to add a search bar.";
 }
 
 #hits:empty:before {
