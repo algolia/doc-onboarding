@@ -5,10 +5,10 @@ import {
   InstantSearch,
   RefinementList,
   SearchBox,
+  Stats,
 } from 'react-instantsearch-hooks-web'
 
 import { Content } from './Content'
-import { Stats } from './Stats'
 import { Panel } from './Panel'
 
 const searchClient = algoliasearch(

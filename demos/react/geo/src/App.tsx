@@ -4,11 +4,11 @@ import {
   Configure,
   InstantSearch,
   SearchBox,
+  Stats,
 } from 'react-instantsearch-hooks-web'
 
 import { Map } from './Map'
 import { Content } from './Content'
-import { Stats } from './Stats'
 
 const searchClient = algoliasearch(
   'B1G2GM9NG0',
