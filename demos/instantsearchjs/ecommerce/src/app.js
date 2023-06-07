@@ -1,45 +1,49 @@
 /* global instantsearch */
 
-import { hitTemplate } from "./helpers";
+import { hitTemplate, mHitTemplate } from "./helpers";
+
 
 const search = instantsearch({
-  appId: "B1G2GM9NG0",
-  apiKey: "aadef574be1f9252bb48d4ea09b5cfe5",
   indexName: "demo_ecommerce",
-  searchParameters: {
-    hitsPerPage: 5,
-    attributesToSnippet: ["description:24"],
-    snippetEllipsisText: " [...]"
-  }
+  searchClient: algoliasearch(
+    'B1G2GM9NG0',
+    'aadef574be1f9252bb48d4ea09b5cfe5',
+  )
 });
+
+search.addWidget(
+  instantsearch.widgets.configure({
+    hitsPerPage: 5,
+    attributesToSnippet: ['description:24'],
+    snippetEllipsisText: " [...]"
+  })
+);
 
 // Uncomment the following widget to add hits list.
 
-/* search.addWidget(
+search.addWidget(
   instantsearch.widgets.hits({
     container: "#hits",
     templates: {
       empty: "No results.",
-      item: function(hit) {
-        return hitTemplate(hit);
-      }
+      item: mHitTemplate
     }
   })
-); */
+);
 
 // Uncomment the following widget to add a search bar.
 
-/* search.addWidget(
+ search.addWidget(
   instantsearch.widgets.searchBox({
     container: "#searchbox",
     placeholder: "Search for products",
     autofocus: false
   })
-); */
+);
 
 // Uncomment the following widget to add search stats.
 
-/* search.addWidget(
+search.addWidget(
   instantsearch.widgets.stats({
     container: "#stats",
     templates: {
@@ -50,7 +54,7 @@ const search = instantsearch({
       }
     }
   })
-); */
+);
 
 // Uncomment the following widget to add categories list.
 

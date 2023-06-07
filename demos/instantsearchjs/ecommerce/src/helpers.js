@@ -16,3 +16,21 @@ export function hitTemplate(hit) {
     </div>
   `;
 }
+
+const { highlight } = instantsearch;
+const { snippet } = instantsearch;
+
+export function mHitTemplate(hit, { html, components }) {
+  return html`
+  <div class="hit">
+    <div class="hit-image">
+      <img src="${hit.image}" />
+    </div>
+    <div class="hit-content">
+      <div class="hit-name">${highlight({ attribute: 'name', hit })}</div>
+      <div class="hit-description">${snippet({ attribute: 'description', hit })}</div>
+      <div class="hit-price">$${hit.price}</div>
+    </div>
+  </div>
+  `
+}
