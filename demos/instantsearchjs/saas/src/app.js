@@ -3,18 +3,23 @@
 import { hitTemplate } from "./helpers";
 
 const search = instantsearch({
-  appId: "B1G2GM9NG0",
-  apiKey: "aadef574be1f9252bb48d4ea09b5cfe5",
+  searchClient: algoliasearch(
+    'B1G2GM9NG0',
+    'aadef574be1f9252bb48d4ea09b5cfe5',
+  ),
   indexName: "demo_saas",
-  searchParameters: {
+});
+
+search.addWidget(
+  instantsearch.widgets.configure({
     hitsPerPage: 4,
     distinct: 3
-  }
-});
+  })
+);
 
 // Uncomment the following widget to add hits list.
 
-/* search.addWidget(
+search.addWidget(
   instantsearch.widgets.hits({
     container: "#hits",
     templates: {
@@ -24,21 +29,21 @@ const search = instantsearch({
       }
     }
   })
-); */
+);
 
 // Uncomment the following widget to add a search bar.
 
-/* search.addWidget(
+search.addWidget(
   instantsearch.widgets.searchBox({
     container: "#searchbox",
     placeholder: "Search in your CRM",
     autofocus: false
   })
-); */
+);
 
 // Uncomment the following widget to add search stats.
 
-/* search.addWidget(
+search.addWidget(
   instantsearch.widgets.stats({
     container: "#stats",
     templates: {
@@ -49,19 +54,18 @@ const search = instantsearch({
       }
     }
   })
-); */
+);
 
 // Uncomment the following widget to add types list.
 
-/* search.addWidget(
+search.addWidget(
   instantsearch.widgets.refinementList({
     container: "#type",
-    attributeName: "type",
-    autoHideContainer: false,
+    attribute: "type",
     templates: {
       header: "Categories"
     }
   })
-); */
+);
 
 search.start();
