@@ -26,7 +26,7 @@ search.addWidget(
     container: "#hits",
     templates: {
       empty: "No results.",
-      item: mHitTemplate
+      item: hitTemplate
     }
   })
 );
