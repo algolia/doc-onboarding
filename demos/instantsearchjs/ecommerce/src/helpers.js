@@ -17,9 +17,6 @@ export function hitTemplate(hit) {
   `;
 }
 
-const { highlight } = instantsearch;
-const { snippet } = instantsearch;
-
 export function mHitTemplate(hit, { html, components }) {
   return html`
   <div class="hit">
@@ -27,8 +24,8 @@ export function mHitTemplate(hit, { html, components }) {
       <img src="${hit.image}" />
     </div>
     <div class="hit-content">
-      <div class="hit-name">${highlight({ attribute: 'name', hit })}</div>
-      <div class="hit-description">${snippet({ attribute: 'description', hit })}</div>
+      <div class="hit-name">${instantsearch.highlight({ attribute: 'name', hit })}</div>
+      <div class="hit-description">${instantsearch.snippet({ attribute: 'description', hit })}</div>
       <div class="hit-price">$${hit.price}</div>
     </div>
   </div>

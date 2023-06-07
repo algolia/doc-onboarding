@@ -58,50 +58,48 @@ search.addWidget(
 
 // Uncomment the following widget to add categories list.
 
-/* search.addWidget(
+search.addWidget(
   instantsearch.widgets.refinementList({
     container: "#categories",
-    attributeName: "categories",
+    attribute: "categories",
     autoHideContainer: false,
     templates: {
       header: "Categories"
     }
   })
-); */
+);
 
 // Uncomment the following widget to add brands list.
 
-/* search.addWidget(
+search.addWidget(
   instantsearch.widgets.refinementList({
     container: "#brands",
-    attributeName: "brand",
-    searchForFacetValues: true,
-    autoHideContainer: false,
+    attribute: "brand",
+    searchable: true,
     templates: {
       header: "Brands"
     }
   })
-); */
+); 
 
 // Uncomment the following widget to add price range.
 
-/*  search.addWidget(
+search.addWidget(
   instantsearch.widgets.rangeSlider({
     container: "#price",
-    autoHideContainer: false,
-    attributeName: "price",
+    attribute: "price",
     templates: {
       header: "Price"
     }
   })
-); */
+);
 
 // Uncomment the following widget to add pagination.
 
-/* search.addWidget(
+search.addWidget(
   instantsearch.widgets.pagination({
     container: "#pagination"
   })
-); */
+);
 
 search.start();
