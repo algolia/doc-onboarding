@@ -46,9 +46,9 @@ search.addWidget(
   instantsearch.widgets.stats({
     container: "#stats",
     templates: {
-      body(hit) {
-        return `<span role="img" aria-label="emoji">⚡️</span> <strong>${hit.nbHits}</strong> results found ${
-          hit.query != "" ? `for <strong>"${hit.query}"</strong>` : ``
+      text(hit, {html}) {
+        return html`<span role="img" aria-label="emoji">⚡️</span> <strong>${hit.nbHits}</strong> results found ${
+          hit.query != "" ? html`for <strong>"${hit.query}"</strong>` : html``
         } in <strong>${hit.processingTimeMS}ms</strong>`;
       }
     }
@@ -58,12 +58,13 @@ search.addWidget(
 // Uncomment the following widget to add categories list.
 
 search.addWidget(
-  instantsearch.widgets.refinementList({
-    container: "#categories",
-    attribute: "categories",
+  instantsearch.widgets.panel({
     templates: {
       header: "Categories"
     }
+  })(instantsearch.widgets.refinementList)({
+    container: "#categories",
+    attribute: "categories",
   })
 );
 

@@ -47,9 +47,9 @@ search.addWidget(
   instantsearch.widgets.stats({
     container: "#stats",
     templates: {
-      body(hit) {
-        return `<span role="img" aria-label="emoji">⚡️</span> <strong>${hit.nbHits}</strong> results found ${
-          hit.query != "" ? `for <strong>"${hit.query}"</strong>` : ``
+      text(hit, {html}) {
+        return html`<span role="img" aria-label="emoji">⚡️</span> <strong>${hit.nbHits}</strong> results found ${
+          hit.query != "" ? html`for <strong>"${hit.query}"</strong>` : html``
         } in <strong>${hit.processingTimeMS}ms</strong>`;
       }
     }
