@@ -1,4 +1,4 @@
-/* global instantsearch */
+/* global algoliasearch, instantsearch */
 
 import { hitTemplate } from './helpers'
 

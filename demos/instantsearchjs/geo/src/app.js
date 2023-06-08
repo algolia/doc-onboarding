@@ -1,4 +1,4 @@
-/* global instantsearch */
+/* global algoliasearch, instantsearch */
 
 const search = instantsearch({
   indexName: 'demo_geo',
