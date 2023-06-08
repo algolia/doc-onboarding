@@ -84,12 +84,13 @@ search.addWidget(
 // Uncomment the following widget to add price range.
 
 search.addWidget(
-  instantsearch.widgets.rangeSlider({
-    container: '#price',
-    attribute: 'price',
+  instantsearch.widgets.panel({
     templates: {
       header: 'Price',
     },
+  })(instantsearch.widgets.rangeSlider)({
+    container: '#price',
+    attribute: 'price',
   })
 )
 
