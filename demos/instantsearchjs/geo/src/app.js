@@ -91,7 +91,7 @@ search.addWidget(
                       )}km
                       away,${' '}
                     </span>`
-                  : ''}
+                  : html``}
                 ${hit.nb_airline_liaisons} liaisons
               </span>
             </p>
@@ -110,11 +110,11 @@ search.addWidget(
     templates: {
       text(hit, { html }) {
         return html`<span role="img" aria-label="emoji">⚡️</span>
-          <strong>${hit.nbHits}</strong> results found
+          <strong>${hit.nbHits}</strong> results found ${' '}
           ${hit.query != ''
             ? html`for <strong>"${hit.query}"</strong>`
             : html``}
-          in <strong>${hit.processingTimeMS}ms</strong>`
+          ${' '} in <strong>${hit.processingTimeMS}ms</strong>`
       },
     },
   })

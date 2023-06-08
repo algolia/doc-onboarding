@@ -1,6 +1,6 @@
 /* global instantsearch */
 
-import { hitTemplate, mHitTemplate } from './helpers'
+import { hitTemplate } from './helpers'
 
 const search = instantsearch({
   indexName: 'demo_ecommerce',
@@ -45,11 +45,11 @@ search.addWidget(
     templates: {
       text(hit, { html }) {
         return html`<span role="img" aria-label="emoji">⚡️</span>
-          <strong>${hit.nbHits}</strong> results found
+          <strong>${hit.nbHits}</strong> results found ${' '}
           ${hit.query != ''
             ? html`for <strong>"${hit.query}"</strong>`
             : html``}
-          in <strong>${hit.processingTimeMS}ms</strong>`
+          ${' '} in <strong>${hit.processingTimeMS}ms</strong>`
       },
     },
   })
@@ -69,6 +69,7 @@ search.addWidget(
 )
 
 // Uncomment the following widget to add brands list.
+
 search.addWidget(
   instantsearch.widgets.panel({
     templates: {
