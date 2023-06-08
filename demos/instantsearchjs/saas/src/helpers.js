@@ -74,7 +74,6 @@ export function hitTemplate(res) {
   res.hits.forEach(hit => {
     tables[hit.type.toLowerCase()].fields.push(
       tables[hit.type.toLowerCase()].fields[0].map(item => {
-        
         return hit._highlightResult[item]
           ? hit._highlightResult[item].value
           : hit[item];
@@ -92,5 +91,6 @@ export function hitTemplate(res) {
         "</div></div>";
     }
   });
+
   return html;
 }
