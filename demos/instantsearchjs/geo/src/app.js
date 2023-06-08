@@ -19,7 +19,7 @@ search.addWidget(
 
 // Uncomment the following widget to add a map.
 
-/*const InfoWindow = new window.google.maps.InfoWindow()
+const InfoWindow = new window.google.maps.InfoWindow()
 
 search.addWidget(
   instantsearch.widgets.geoSearch({
@@ -51,7 +51,7 @@ search.addWidget(
       }
     }
   })
-)*/
+)
 
 // Uncomment the following widget to add a search bar.
 
@@ -65,7 +65,7 @@ search.addWidget(
 
 // Uncomment the following widget to add hits list.
 
-/search.addWidget(
+search.addWidget(
   instantsearch.widgets.hits({
     container: '#hits',
     templates: {
@@ -75,23 +75,25 @@ search.addWidget(
           <div class="hit">
             <h2 class="hit-name">
               <span class="hit-airport-name">
-                ${instantsearch.highlight({ attribute: 'name', hit })}
-                ${instantsearch.highlight({ attribute: 'city', hit })}
+                ${components.Highlight({ attribute: 'name', hit })}
+                ${' '}
+                ${components.Highlight({ attribute: 'city', hit })}
               </span>
+              ${' '}
               <span class="hit-airport-code">
-                (${instantsearch.highlight({ attribute: 'airport_id', hit })})
+                (${components.Highlight({ attribute: 'airport_id', hit })})
               </span>
             </h2>
             <p class="hit-location">
-            ${instantsearch.highlight({ attribute: 'country', hit })}<br />
+            ${components.Highlight({ attribute: 'country', hit })}<br />
               <span class="hit-distance">
                 ${
                   hit._rankingInfo && hit._rankingInfo.matchedGeoLocation
-                    ? `<span>
+                    ? html`<span>
                 ${parseInt(
                   hit._rankingInfo.matchedGeoLocation.distance / 1000,
                   10
-                )}km away,
+                )}km away,${' '}
               </span>`
                     : ''
                 }
