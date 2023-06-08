@@ -17,7 +17,7 @@ search.addWidget(
 
 // Uncomment the following widget to add hits list.
 
-search.addWidget(
+/* search.addWidget(
   instantsearch.widgets.hits({
     container: '#hits',
     templates: {
@@ -25,21 +25,21 @@ search.addWidget(
       item: hitTemplate,
     },
   })
-)
+) */
 
 // Uncomment the following widget to add a search bar.
 
-search.addWidget(
+/* search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#searchbox',
     placeholder: 'Search for products',
     autofocus: false,
   })
-)
+) */
 
 // Uncomment the following widget to add search stats.
 
-search.addWidget(
+/* search.addWidget(
   instantsearch.widgets.stats({
     container: '#stats',
     templates: {
@@ -53,11 +53,11 @@ search.addWidget(
       },
     },
   })
-)
+) */
 
 // Uncomment the following widget to add categories list.
 
-search.addWidget(
+/* search.addWidget(
   instantsearch.widgets.panel({
     templates: {
       header: 'Categories',
@@ -66,11 +66,11 @@ search.addWidget(
     container: '#categories',
     attribute: 'categories',
   })
-)
+) */
 
 // Uncomment the following widget to add brands list.
 
-search.addWidget(
+/* search.addWidget(
   instantsearch.widgets.panel({
     templates: {
       header: 'Brands',
@@ -80,11 +80,11 @@ search.addWidget(
     attribute: 'brand',
     searchable: true,
   })
-)
+) */
 
 // Uncomment the following widget to add price range.
 
-search.addWidget(
+/* search.addWidget(
   instantsearch.widgets.panel({
     templates: {
       header: 'Price',
@@ -93,14 +93,14 @@ search.addWidget(
     container: '#price',
     attribute: 'price',
   })
-)
+) */
 
 // Uncomment the following widget to add pagination.
 
-search.addWidget(
+/* search.addWidget(
   instantsearch.widgets.pagination({
     container: '#pagination',
   })
-)
+) */
 
 search.start()

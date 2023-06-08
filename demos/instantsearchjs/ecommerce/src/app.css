@@ -433,7 +433,7 @@ a {
 }
 
 #categories:empty:before {
-  content: "Uncomment the categories widget to add categories list.";
+  content: "Uncomment the refinementList widget for categories to add categories list.";
 }
 
 #pagination:empty:before {

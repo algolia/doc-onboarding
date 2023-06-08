@@ -16,7 +16,7 @@ search.addWidget(
 
 // Uncomment the following widget to add a map.
 
-const InfoWindow = new window.google.maps.InfoWindow()
+/* const InfoWindow = new window.google.maps.InfoWindow()
 
 search.addWidget(
   instantsearch.widgets.geoSearch({
@@ -48,21 +48,21 @@ search.addWidget(
       },
     },
   })
-)
+) */
 
 // Uncomment the following widget to add a search bar.
 
-search.addWidget(
+/* search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#searchbox',
     placeholder: 'Search airports by name, city, airport code',
     autofocus: false,
   })
-)
+) */
 
 // Uncomment the following widget to add hits list.
 
-search.addWidget(
+/* search.addWidget(
   instantsearch.widgets.hits({
     container: '#hits',
     templates: {
@@ -100,11 +100,11 @@ search.addWidget(
       },
     },
   })
-)
+) */
 
 // Uncomment the following widget to add search stats.
 
-search.addWidget(
+/* search.addWidget(
   instantsearch.widgets.stats({
     container: '#stats',
     templates: {
@@ -118,6 +118,6 @@ search.addWidget(
       },
     },
   })
-)
+) */
 
 search.start()
