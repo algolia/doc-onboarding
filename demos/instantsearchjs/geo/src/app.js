@@ -2,10 +2,7 @@
 
 const search = instantsearch({
   indexName: 'demo_geo',
-  searchClient: algoliasearch(
-    'B1G2GM9NG0',
-    'aadef574be1f9252bb48d4ea09b5cfe5',
-  )
+  searchClient: algoliasearch('B1G2GM9NG0', 'aadef574be1f9252bb48d4ea09b5cfe5'),
 })
 
 search.addWidget(
@@ -13,7 +10,7 @@ search.addWidget(
     hitsPerPage: 6,
     getRankingInfo: true,
     aroundLatLngViaIP: true,
-    typoTolerance: 'min'
+    typoTolerance: 'min',
   })
 )
 
@@ -32,7 +29,7 @@ search.addWidget(
       zoom: 4,
       minZoom: 3,
       maxZoom: 6,
-      styles: [{ stylers: [{ hue: '#3596D2' }] }]
+      styles: [{ stylers: [{ hue: '#3596D2' }] }],
     },
     enableRefineControl: false,
     enableRefineOnMapMove: false,
@@ -47,9 +44,9 @@ search.addWidget(
             }<br>${item.nb_airline_liaisons} liaisons`
           )
           InfoWindow.open(map, marker)
-        }
-      }
-    }
+        },
+      },
+    },
   })
 )
 
@@ -59,7 +56,7 @@ search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#searchbox',
     placeholder: 'Search airports by name, city, airport code',
-    autofocus: false
+    autofocus: false,
   })
 )
 
@@ -70,13 +67,12 @@ search.addWidget(
     container: '#hits',
     templates: {
       empty: 'No results.',
-      item(hit, { html, components}) {
+      item(hit, { html, components }) {
         return html`
           <div class="hit">
             <h2 class="hit-name">
               <span class="hit-airport-name">
-                ${components.Highlight({ attribute: 'name', hit })}
-                ${' '}
+                ${components.Highlight({ attribute: 'name', hit })} ${' '}
                 ${components.Highlight({ attribute: 'city', hit })}
               </span>
               ${' '}
@@ -85,43 +81,42 @@ search.addWidget(
               </span>
             </h2>
             <p class="hit-location">
-            ${components.Highlight({ attribute: 'country', hit })}<br />
+              ${components.Highlight({ attribute: 'country', hit })}<br />
               <span class="hit-distance">
-                ${
-                  hit._rankingInfo && hit._rankingInfo.matchedGeoLocation
-                    ? html`<span>
-                ${parseInt(
-                  hit._rankingInfo.matchedGeoLocation.distance / 1000,
-                  10
-                )}km away,${' '}
-              </span>`
-                    : ''
-                }
+                ${hit._rankingInfo && hit._rankingInfo.matchedGeoLocation
+                  ? html`<span>
+                      ${parseInt(
+                        hit._rankingInfo.matchedGeoLocation.distance / 1000,
+                        10
+                      )}km
+                      away,${' '}
+                    </span>`
+                  : ''}
                 ${hit.nb_airline_liaisons} liaisons
               </span>
-
             </p>
           </div>
         `
-      }
-    }
+      },
+    },
   })
 )
 
 // Uncomment the following widget to add search stats.
 
- search.addWidget(
+search.addWidget(
   instantsearch.widgets.stats({
     container: '#stats',
     templates: {
-      text(hit, {html}) {
-        return html`<span role="img" aria-label="emoji">⚡️</span> <strong>${
-          hit.nbHits
-        }</strong> results found ${
-          hit.query != '' ? html`for <strong>"${hit.query}"</strong>` : html``
-        } in <strong>${hit.processingTimeMS}ms</strong>`
-      }
-    }
+      text(hit, { html }) {
+        return html`<span role="img" aria-label="emoji">⚡️</span>
+          <strong>${hit.nbHits}</strong> results found
+          ${hit.query != ''
+            ? html`for <strong>"${hit.query}"</strong>`
+            : html``}
+          in <strong>${hit.processingTimeMS}ms</strong>`
+      },
+    },
   })
 )
 

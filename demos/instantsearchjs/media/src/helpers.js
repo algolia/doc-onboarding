@@ -28,13 +28,15 @@ export function hitTemplate(hit, { html, components }) {
             ${instantsearch.highlight({ attribute: 'author_name', hit })}
           </div>
           <div class="post-meta-info">
-            ${hit.time_to_read
-    } min read in ${instantsearch.highlight({ attribute: 'categories', hit }) }
+            ${hit.time_to_read} min read in ${instantsearch.highlight({
+    attribute: 'categories',
+    hit,
+  })}
     <!--Not sure how to map this value to join-->
           </div>
         </div>
       </div>
     </div>
       </article>
-    </div>`;
+    </div>`
 }
