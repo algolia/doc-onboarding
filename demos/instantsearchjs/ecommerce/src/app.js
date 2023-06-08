@@ -59,26 +59,28 @@ search.addWidget(
 // Uncomment the following widget to add categories list.
 
 search.addWidget(
-  instantsearch.widgets.refinementList({
-    container: "#categories",
-    attribute: "categories",
-    autoHideContainer: false,
+  instantsearch.widgets.panel({
     templates: {
       header: "Categories"
-    }
+    },
+  })(instantsearch.widgets.refinementList)(
+  {
+    container: "#categories",
+    attribute: "categories"
   })
 );
 
 // Uncomment the following widget to add brands list.
-
 search.addWidget(
-  instantsearch.widgets.refinementList({
-    container: "#brands",
-    attribute: "brand",
-    searchable: true,
+  instantsearch.widgets.panel({
     templates: {
       header: "Brands"
     }
+  })
+  (instantsearch.widgets.refinementList)({
+    container: "#brands",
+    attribute: "brand",
+    searchable: true,
   })
 ); 
 
