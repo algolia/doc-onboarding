@@ -416,7 +416,8 @@ a {
 #searchbox:empty,
 #hits:empty,
 #categories:empty,
-#brands:empty {
+#brands:empty,
+#pagination:empty {
   margin-bottom: 24px;
 }
 
