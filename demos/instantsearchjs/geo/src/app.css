@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
 * {
   box-sizing: border-box;
 }
@@ -26,14 +24,23 @@ body {
   flex-direction: column;
 }
 
+footer {
+  flex-grow: 0;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+}
+
 a {
   color: #5468ff;
 }
 
-em {
+.ais-Highlight-highlighted,
+.ais-Snippet-highlighted {
   font-style: normal;
   font-weight: bold;
   text-decoration: underline;
+  background-color: transparent;
 }
 
 .search-container {
@@ -50,15 +57,15 @@ em {
   }
 }
 
-.ais-hits--item,
-.ais-search-box--input {
+.ais-Hits-item,
+.ais-SearchBox-input {
   height: auto;
   background: #fff;
   border-radius: 4px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
-.ais-search-box--input:focus {
+.ais-SearchBox-input:focus {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -73,6 +80,45 @@ em {
   flex-direction: column;
 }
 
+.ais-Hits-item,
+.ais-SearchBox-input,
+#map {
+  height: auto;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Map */
+
+#map {
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  order: 1;
+  overflow: hidden;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 2px 5px;
+  font-weight: bold;
+  color: #5468ff;
+  background-color: white;
+  border: 2px solid currentColor;
+  transform: translate(-50%, -50%);
+}
+
+/* Search box */
+
 #searchbox {
   flex-grow: 0;
   margin-bottom: 8px;
@@ -83,118 +129,107 @@ em {
   flex-grow: 0;
 }
 
-.ais-search-box {
+.ais-SearchBox {
   position: relative;
   height: auto;
   width: 100%;
 }
 
-.ais-search-box--magnifier,
-.ais-search-box--reset {
+.ais-SearchBox-submit,
+.ais-SearchBox-reset {
   position: absolute;
   top: 0;
   left: inherit;
   margin: 14px 16px;
+  padding: 0;
+  background: none;
+  border: none;
   cursor: pointer;
 }
 
-.ais-search-box--magnifier svg,
-.ais-search-box--reset svg {
+.ais-SearchBox-submit svg,
+.ais-SearchBox-reset svg {
   width: 13px;
   height: 13px;
   display: block;
 }
 
-.ais-search-box--magnifier svg {
+.ais-SearchBox-submit svg {
   fill: #5468ff;
 }
 
-.ais-search-box--reset svg {
+.ais-SearchBox-reset svg {
   fill: #ed5a6a;
 }
 
-.ais-search-box--magnifier {
+.ais-SearchBox-submit {
   right: 0;
 }
 
-.ais-search-box--reset {
+.ais-SearchBox-reset {
   background: none;
   padding: 0;
   border: none;
   right: 30px;
 }
 
-.ais-search-box--input {
+.ais-SearchBox-input {
   width: 100%;
   padding: 8px 16px;
   font-weight: normal;
   border: none;
+  font-family: inherit;
+  line-height: inherit;
+  font-size: inherit;
   -webkit-appearance: none;
   appearance: none;
 }
+
+/* Stats */
 
 #stats {
   flex-grow: 0;
   margin-bottom: 16px;
 }
 
-.ais-stats {
+.ais-Stats {
   font-size: 12px;
   color: #697782;
-  opacity: 1;
 }
+
+/* Hits */
 
 #hits {
   margin-right: 24px;
   flex-grow: 1;
 }
 
-.ais-hits--item {
+.ais-Hits-item {
   margin-bottom: 24px;
   padding: 16px;
 }
 
-.ais-hits--item .hit-airport-code,
-.ais-hits--item .hit-location,
-.ais-hits--item .hit-name {
+.ais-Hits-item .hit-airport-code,
+.ais-Hits-item .hit-location,
+.ais-Hits-item .hit-name {
   margin: 0;
 }
 
-.ais-hits--item .hit-name {
+.ais-Hits-item .hit-name {
   font-size: 16px;
   font-weight: normal;
   text-transform: uppercase;
   margin-bottom: 8px;
 }
 
-.ais-hits--item .hit-location {
+.ais-Hits-item .hit-location {
   text-transform: uppercase;
   font-size: 12px;
   color: #999;
 }
 
-.ais-hits--item:last-child {
+.ais-Hits-item:last-child {
   margin-bottom: 0;
-}
-
-#map {
-  height: 100%;
-  width: 100%;
-  border-radius: 4px;
-  margin-bottom: 24px;
-  overflow: hidden;
-}
-
-.ais-geo-search,
-.ais-geo-search--map {
-  height: 100%;
-}
-
-footer {
-  flex-grow: 0;
-  text-align: center;
-  font-size: 12px;
-  color: #999;
 }
 
 /* Placeholders */
