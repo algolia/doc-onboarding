@@ -1,5 +1,5 @@
 import React from 'react'
-import { Highlight, Snippet } from 'react-instantsearch-hooks-web'
+import { Highlight, Snippet } from 'react-instantsearch'
 import type { Hit } from 'instantsearch.js'
 
 type HitProps = {

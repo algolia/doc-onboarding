@@ -1,5 +1,5 @@
 import React from 'react'
-import { Highlight, useHits } from 'react-instantsearch-hooks-web'
+import { Highlight, useHits } from 'react-instantsearch'
 import type { Hit as BaseHit } from 'instantsearch.js'
 
 const data = {

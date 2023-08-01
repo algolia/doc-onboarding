@@ -1,4 +1,4 @@
-# Algolia React InstantSearch Hooks | Geo demo
+# Algolia React InstantSearch | Geo demo
 
 _This project was generated with [create-instantsearch-app](https://github.com/algolia/instantsearch/tree/master/packages/create-instantsearch-app) by [Algolia](https://algolia.com)._
 
