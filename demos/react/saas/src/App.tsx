@@ -6,7 +6,7 @@ import {
   RefinementList,
   SearchBox,
   Stats,
-} from 'react-instantsearch-hooks-web'
+} from 'react-instantsearch'
 
 import { Content } from './Content'
 import { Panel } from './Panel'

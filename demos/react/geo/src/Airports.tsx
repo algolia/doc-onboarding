@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { Marker, Popup, useMapEvents } from 'react-leaflet'
 import { DivIcon } from 'leaflet'
-import { useSearchBox } from 'react-instantsearch-hooks-web'
-import { useGeoSearch } from './useGeoSearch'
+import { useGeoSearch, useSearchBox } from 'react-instantsearch'
 
 import type { GeoHit } from 'instantsearch.js/es/connectors/geo-search/connectGeoSearch'
 

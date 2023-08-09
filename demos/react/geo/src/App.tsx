@@ -1,11 +1,6 @@
 import React from 'react'
 import algoliasearch from 'algoliasearch/lite'
-import {
-  Configure,
-  InstantSearch,
-  SearchBox,
-  Stats,
-} from 'react-instantsearch-hooks-web'
+import { Configure, InstantSearch, SearchBox, Stats } from 'react-instantsearch'
 
 import { Map } from './Map'
 import { Content } from './Content'

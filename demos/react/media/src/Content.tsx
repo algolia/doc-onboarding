@@ -1,5 +1,5 @@
 import React from 'react'
-import { Hits, useInstantSearch } from 'react-instantsearch-hooks-web'
+import { Hits, useInstantSearch } from 'react-instantsearch'
 import { Hit } from './Hit'
 
 export function Content() {

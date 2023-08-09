@@ -1,5 +1,5 @@
 import React from 'react'
-import { Highlight } from 'react-instantsearch-hooks-web'
+import { Highlight } from 'react-instantsearch'
 import type { Hit as BaseHit } from 'instantsearch.js'
 
 import { Airport } from './Airports'

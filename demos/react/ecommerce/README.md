@@ -1,4 +1,4 @@
-# Algolia React InstantSearch Hooks | E-commerce demo
+# Algolia React InstantSearch | E-commerce demo
 
 _This project was generated with [create-instantsearch-app](https://github.com/algolia/instantsearch/tree/master/packages/create-instantsearch-app) by [Algolia](https://algolia.com)._
 
