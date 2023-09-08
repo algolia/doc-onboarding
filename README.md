@@ -1,31 +1,10 @@
 # doc-onboarding
 
+The content of this repository has been moved to [algolia/doc-code-samples](https://github.com/algolia/doc-code-samples/tree/master/onboarding).
+
 ## CodeSandbox links
 
-### Media
+| E-commerce                                                   | Geo                                                          | Media                                                        | Saas                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [InstantSearch.js](https://codesandbox.io/s/github/algolia/doc-code-samples/tree/master/onboarding/demos/instantsearchjs/ecommerce)<br />[React InstantSearch](https://codesandbox.io/s/github/algolia/doc-code-samples/tree/master/onboarding/demos/react/ecommerce)<br />[Vue InstantSearch](https://codesandbox.io/s/github/algolia/doc-code-samples/tree/master/onboarding/demos/vue/ecommerce)<br />[Angular InstantSearch](https://codesandbox.io/s/github/algolia/doc-code-samples/tree/master/onboarding/demos/angular/ecommerce) | [InstantSearch.js](https://codesandbox.io/s/github/algolia/doc-code-samples/tree/master/onboarding/demos/instantsearchjs/geo)<br />[React InstantSearch](https://codesandbox.io/s/github/algolia/doc-code-samples/tree/master/onboarding/demos/react/geo)<br />[Vue InstantSearch](https://codesandbox.io/s/github/algolia/doc-code-samples/tree/master/onboarding/demos/vue/geo)<br />[Angular InstantSearch](https://codesandbox.io/s/github/algolia/doc-code-samples/tree/master/onboarding/demos/angular/geo) | [InstantSearch.js](https://codesandbox.io/s/github/algolia/doc-code-samples/tree/master/onboarding/demos/instantsearchjs/media)<br />[React InstantSearch](https://codesandbox.io/s/github/algolia/doc-code-samples/tree/master/onboarding/demos/react/media)<br />[Vue InstantSearch](https://codesandbox.io/s/github/algolia/doc-code-samples/tree/master/onboarding/demos/vue/media)<br />[Angular InstantSearch](https://codesandbox.io/s/github/algolia/doc-code-samples/tree/master/onboarding/demos/angular/media) | [InstantSearch.js](https://codesandbox.io/s/github/algolia/doc-code-samples/tree/master/onboarding/demos/instantsearchjs/saas)<br />[React InstantSearch](https://codesandbox.io/s/github/algolia/doc-code-samples/tree/master/onboarding/demos/react/saas)<br />[Vue InstantSearch](https://codesandbox.io/s/github/algolia/doc-code-samples/tree/master/onboarding/demos/vue/saas)<br />[Angular InstantSearch](https://codesandbox.io/s/github/algolia/doc-code-samples/tree/master/onboarding/demos/angular/saas) |
 
-- [InstantSearch.js](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/instantsearchjs/media)
-- [React InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/react/media)
-- [Vue InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/vue/media)
-- [Angular InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/angular/media)
-
-### Saas
-
-- [InstantSearch.js](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/instantsearchjs/saas)
-- [React InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/react/saas)
-- [Vue InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/vue/saas)
-- [Angular InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/angular/saas)
-
-### E-commerce
-
-- [InstantSearch.js](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/instantsearchjs/ecommerce)
-- [React InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/react/ecommerce)
-- [Vue InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/vue/ecommerce)
-- [Angular InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/angular/ecommerce)
-
-### Geo
-
-- [InstantSearch.js](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/instantsearchjs/geo)
-- [React InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/react/geo)
-- [Vue InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/vue/geo)
-- [Angular InstantSearch](https://codesandbox.io/s/github/algolia/doc-onboarding/tree/master/demos/angular/geo)
