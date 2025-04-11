@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "vue": "2.5.22",
-    "vue-instantsearch": "1.7.0"
+    "vue-instantsearch": "2.7.1"
   },
   "devDependencies": {
     "babel-core": "6.26.3",
