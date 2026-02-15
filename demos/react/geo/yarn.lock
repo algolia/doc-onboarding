@@ -2,31 +2,6 @@
 # yarn lockfile v1
 
 
-"@ai-sdk/gateway@2.0.24":
-  version "2.0.24"
-  resolved "https://registry.yarnpkg.com/@ai-sdk/gateway/-/gateway-2.0.24.tgz#6b02cb1bb4dac96efd5c6b52eb73ea4aec44d379"
-  integrity sha512-mflk80YF8hj8vrF9e1IHhovGKC1ubX+sY88pesSk3pUiXfH5VPO8dgzNnxjwsqsCZrnkHcztxS5cSl4TzSiEuA==
-  dependencies:
-    "@ai-sdk/provider" "2.0.1"
-    "@ai-sdk/provider-utils" "3.0.20"
-    "@vercel/oidc" "3.0.5"
-
-"@ai-sdk/provider-utils@3.0.20":
-  version "3.0.20"
-  resolved "https://registry.yarnpkg.com/@ai-sdk/provider-utils/-/provider-utils-3.0.20.tgz#61d7741065550833eae3ac6440d943e9d3d25120"
-  integrity sha512-iXHVe0apM2zUEzauqJwqmpC37A5rihrStAih5Ks+JE32iTe4LZ58y17UGBjpQQTCRw9YxMeo2UFLxLpBluyvLQ==
-  dependencies:
-    "@ai-sdk/provider" "2.0.1"
-    "@standard-schema/spec" "^1.0.0"
-    eventsource-parser "^3.0.6"
-
-"@ai-sdk/provider@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@ai-sdk/provider/-/provider-2.0.1.tgz#4aba415f1815da33a7a81e5f41a0219af53278c0"
-  integrity sha512-KCUwswvsC5VsW2PWFqF8eJgSCu5Ysj7m1TxiHTVA6g7k360bk0RNQENT8KTMAYEs+8fWPD3Uu4dEmzGHc+jGng==
-  dependencies:
-    json-schema "^0.4.0"
-
 "@algolia/cache-browser-local-storage@4.25.3":
   version "4.25.3"
   resolved "https://registry.yarnpkg.com/@algolia/cache-browser-local-storage/-/cache-browser-local-storage-4.25.3.tgz#6637063a0847e94e8e82fa3d33301610bc83be37"
@@ -238,11 +213,6 @@
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@msgpackr-extract/msgpackr-extract-win32-x64/-/msgpackr-extract-win32-x64-3.0.2.tgz#0f164b726869f71da3c594171df5ebc1c4b0a407"
   integrity sha512-O+6Gs8UeDbyFpbSh2CPEz/UOrrdWPTBYNblZK5CxxLisYt4kGX3Sc+czffFonyjiGSq3jWLwJS/CCJc7tBr4sQ==
-
-"@opentelemetry/api@1.9.0":
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/@opentelemetry/api/-/api-1.9.0.tgz#d03eba68273dc0f7509e2a3d5cba21eae10379fe"
-  integrity sha512-3giAOQvZiH5F9bMlMiv8+GSPMeqg0dbaeo58/0SlA9sxSqZhnUtxzX9/2FzyhS9sWQf5S0GJE0AKBrFqjpeYcg==
 
 "@parcel/bundler-default@2.16.3":
   version "2.16.3"
@@ -897,11 +867,6 @@
   resolved "https://registry.yarnpkg.com/@react-leaflet/core/-/core-2.1.0.tgz#383acd31259d7c9ae8fb1b02d5e18fe613c2a13d"
   integrity sha512-Qk7Pfu8BSarKGqILj4x7bCSZ1pjuAPZ+qmRwH5S7mDS91VSbVVsJSrW4qA+GPrro8t69gFYVMWb1Zc4yFmPiVg==
 
-"@standard-schema/spec@^1.0.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@standard-schema/spec/-/spec-1.1.0.tgz#a79b55dbaf8604812f52d140b2c9ab41bc150bb8"
-  integrity sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==
-
 "@swc/core-darwin-arm64@1.15.3":
   version "1.15.3"
   resolved "https://registry.yarnpkg.com/@swc/core-darwin-arm64/-/core-darwin-arm64-1.15.3.tgz#bd0bd3ab7730e3ffa64cf200c0ed7c572cbaba97"
@@ -1040,30 +1005,15 @@
     "@types/prop-types" "*"
     csstype "^3.2.2"
 
-"@vercel/oidc@3.0.5":
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/@vercel/oidc/-/oidc-3.0.5.tgz#bd8db7ee777255c686443413492db4d98ef49657"
-  integrity sha512-fnYhv671l+eTTp48gB4zEsTW/YtRgRPnkI2nT7x6qw5rkI1Lq2hTmQIpHPgyThI0znLK+vX2n9XxKdXZ7BUbbw==
-
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
   integrity sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==
 
-ai@^5.0.18:
-  version "5.0.117"
-  resolved "https://registry.yarnpkg.com/ai/-/ai-5.0.117.tgz#8c6445f27eed52548f72cab22fc9327cfb80827a"
-  integrity sha512-uE6HNkdSwxbeHGKP/YbvapwD8fMOpj87wyfT9Z00pbzOh2fpnw5acak/4kzU00SX2vtI9K0uuy+9Tf9ytw5RwA==
-  dependencies:
-    "@ai-sdk/gateway" "2.0.24"
-    "@ai-sdk/provider" "2.0.1"
-    "@ai-sdk/provider-utils" "3.0.20"
-    "@opentelemetry/api" "1.9.0"
-
-algoliasearch-helper@3.27.0:
-  version "3.27.0"
-  resolved "https://registry.yarnpkg.com/algoliasearch-helper/-/algoliasearch-helper-3.27.0.tgz#987c18b715ed0ecb303711feaa14335e5b8516e1"
-  integrity sha512-eNYchRerbsvk2doHOMfdS1/B6Tm70oGtu8mzQlrNzbCeQ8p1MjCW8t/BL6iZ5PD+cL5NNMgTMyMnmiXZ1sgmNw==
+algoliasearch-helper@3.27.1:
+  version "3.27.1"
+  resolved "https://registry.yarnpkg.com/algoliasearch-helper/-/algoliasearch-helper-3.27.1.tgz#199e3849ea7ebc21ec0a4b62013c0df616b16fc0"
+  integrity sha512-XXGr02Cz285vLbqM6vPfb39xqV1ptpFr1xn9mqaW+nUvYTvFTdKgYTC/Cg1VzgRTQqNkq9+LlUVv8cfCeOoKig==
   dependencies:
     "@algolia/events" "^4.0.1"
 
@@ -1243,11 +1193,6 @@ escalade@^3.2.0:
   resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.2.0.tgz#011a3f69856ba189dffa7dc8fcce99d2a87903e5"
   integrity sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA==
 
-eventsource-parser@^3.0.6:
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/eventsource-parser/-/eventsource-parser-3.0.6.tgz#292e165e34cacbc936c3c92719ef326d4aeb4e90"
-  integrity sha512-Vo1ab+QXPzZ4tCa8SwIHJFaSzy4R6SHf7BY79rFBDf0idraZWAkYrDjDj8uWaSm3S2TK+hJ7/t1CEmZ7jXw+pg==
-
 fill-range@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-7.0.1.tgz#1919a6a7c75fe38b2c7c77e5198535da9acdda40"
@@ -1331,32 +1276,30 @@ htm@^3.0.0:
   resolved "https://registry.yarnpkg.com/htm/-/htm-3.1.1.tgz#49266582be0dc66ed2235d5ea892307cc0c24b78"
   integrity sha512-983Vyg8NwUE7JkZ6NmOqpCZ+sh1bKv2iYTlUkzlWmA5JD2acKoxd4KVxbMmxX/85mtfdnDmTFoNKcg5DGAvxNQ==
 
-instantsearch-ui-components@0.16.0:
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/instantsearch-ui-components/-/instantsearch-ui-components-0.16.0.tgz#4105885c2bc1e7d77c6a9b05e29e4f2397a82f6d"
-  integrity sha512-3CoUlEqiFgQ1cd/y90aPi355JVMY757XSrpojC1m8blLPW0nokx4AwH723dHUGU2MtvI0U49dB2F5EGUS0FZkA==
+instantsearch-ui-components@0.17.1:
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/instantsearch-ui-components/-/instantsearch-ui-components-0.17.1.tgz#76ec84232a922868345e9074f535cb331fd5e247"
+  integrity sha512-uOn39sNs9ukK0N6pklVdxbE5dapIdSJmkh/WJPPtOe4bpnvLzzvvexQYpUJ9vy1xQJMaQcAoPMoMKfBXwUA29A==
   dependencies:
     "@babel/runtime" "^7.27.6"
-    ai "^5.0.18"
     markdown-to-jsx "^7.7.15"
     zod "^3.25.76 || ^4"
     zod-to-json-schema "3.24.6"
 
-instantsearch.js@4.86.1:
-  version "4.86.1"
-  resolved "https://registry.yarnpkg.com/instantsearch.js/-/instantsearch.js-4.86.1.tgz#eb6a608e84324f96a2e9a2cf6830023416a20675"
-  integrity sha512-ETazkxnWj3aOsHgQem1JQ4roqhfpkA32CZEW+ccP+rQqSbO4sCEEMJTy1A1BMiTD1iCoBFWD+x+8Bx73DOm/Gg==
+instantsearch.js@4.87.2:
+  version "4.87.2"
+  resolved "https://registry.yarnpkg.com/instantsearch.js/-/instantsearch.js-4.87.2.tgz#eb67068d252a07767e4ca4d1057400208b3de126"
+  integrity sha512-Dt2FImZ8lYbPUDfE9l5tJw5b3sZ8jHZ0lOOqoP3o7QU47KgvceiGLSGtitnGHWnlxHbN0JQvv/Qps7bQCiWtSw==
   dependencies:
     "@algolia/events" "^4.0.1"
     "@types/dom-speech-recognition" "^0.0.1"
     "@types/google.maps" "^3.55.12"
     "@types/hogan.js" "^3.0.0"
     "@types/qs" "^6.5.3"
-    ai "^5.0.18"
-    algoliasearch-helper "3.27.0"
+    algoliasearch-helper "3.27.1"
     hogan.js "^3.0.2"
     htm "^3.0.0"
-    instantsearch-ui-components "0.16.0"
+    instantsearch-ui-components "0.17.1"
     preact "^10.10.0"
     qs "^6.5.1"
     react ">= 0.14.0"
@@ -1384,11 +1327,6 @@ is-number@^7.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
-
-json-schema@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/json-schema/-/json-schema-0.4.0.tgz#f7de4cf6efab838ebaeb3236474cbba5a1930ab5"
-  integrity sha512-es94M3nTIfsEPisRafak+HDLfHXnKBhV3vU5eqPcS3flIWqcxJWgXHXiey3YrpaNsanY5ei1VoYEbOzijuq9BA==
 
 json5@^2.2.1, json5@^2.2.3:
   version "2.2.3"
@@ -1658,28 +1596,27 @@ react-dom@18.3.1:
     loose-envify "^1.1.0"
     scheduler "^0.23.2"
 
-react-instantsearch-core@7.22.1:
-  version "7.22.1"
-  resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-7.22.1.tgz#92cffbfa5c661b55d546ffc2284416bca364671b"
-  integrity sha512-fumuQbLKzEnZ3pX9LHXCbxfol8OiStWa63ujDin9SMb2k6cCMXbkuRC/eRe1EDLYPSfkVAKV+r6elOwT6fTVYQ==
+react-instantsearch-core@7.23.2:
+  version "7.23.2"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-7.23.2.tgz#289482212479e7289e36964a64d4458d1e8584ac"
+  integrity sha512-OHp/iuTeL7VGFXkUPbIZmQEQWxNQn+pE082DKRIo4vIr1QRR70CtD7emuln8CxfQr4Soil7xTgoYuUUoTWG6xw==
   dependencies:
     "@babel/runtime" "^7.27.6"
-    ai "^5.0.18"
-    algoliasearch-helper "3.27.0"
-    instantsearch.js "4.86.1"
+    algoliasearch-helper "3.27.1"
+    instantsearch.js "4.87.2"
     use-sync-external-store "^1.0.0"
     zod "^3.25.76 || ^4"
     zod-to-json-schema "3.24.6"
 
-react-instantsearch@7.22.1:
-  version "7.22.1"
-  resolved "https://registry.yarnpkg.com/react-instantsearch/-/react-instantsearch-7.22.1.tgz#7ce1b09d0765db291d480851eee24a0d3a705647"
-  integrity sha512-sTZ8z2JcSyveP0RmClmP9KFkJMQ9ZZmZKI05uSmfx7fP21N8Ry9CCyn2EvalGFm2gTPaB7VMFZrC9q7HXvG9wA==
+react-instantsearch@7.23.2:
+  version "7.23.2"
+  resolved "https://registry.yarnpkg.com/react-instantsearch/-/react-instantsearch-7.23.2.tgz#5a1285faa1d4a44f98f48888f06601c3be13e8a5"
+  integrity sha512-tPLCc5Gkd+OLD3TaEfcW3yYWv+dtbi8jSCOf8mpb/KNj756DFjlD6HqJC3bZdnyy/PHuhrgH9+K+y3xhbPb32g==
   dependencies:
     "@babel/runtime" "^7.27.6"
-    instantsearch-ui-components "0.16.0"
-    instantsearch.js "4.86.1"
-    react-instantsearch-core "7.22.1"
+    instantsearch-ui-components "0.17.1"
+    instantsearch.js "4.87.2"
+    react-instantsearch-core "7.23.2"
 
 react-leaflet@4.2.1:
   version "4.2.1"
